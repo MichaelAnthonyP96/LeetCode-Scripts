@@ -14,6 +14,7 @@
 class MathUtilities{
 public:
     static int mySqrt(int x);
-}
+    static int climbStairs(int n); 
+};
 
 #endif /* MathUtilities_hpp */
