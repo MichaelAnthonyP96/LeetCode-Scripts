@@ -24,6 +24,9 @@ bool TreeNodeUtilities::isSameTree(TreeNode* p, TreeNode* q){
 }
 
 int TreeNodeUtilities::maxDepth(TreeNode* root) {
+    /*Given a binary tree, find its maximum depth.The maximum depth is the number of nodes along the longest
+     *path from the root node down to the farthest leaf node.
+     */
     //base case with no node
     if(root == NULL) return 0;
     //base case with node with no children
