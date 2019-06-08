@@ -14,7 +14,7 @@ public:
     ListNode(int x); //constructor
     virtual ~ListNode(); //destructor
     ListNode* next; //ListNode pointer next
-    const int val; //Value
+    int val; //Value
 };
 
 #endif /* ListNode_h */

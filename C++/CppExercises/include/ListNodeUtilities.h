@@ -15,6 +15,7 @@
 class ListNodeUtilities{
 public:
     static ListNode* deleteDuplicates(ListNode* head);
+    static ListNode* addTwoNumbers(ListNode* l1, ListNode* l2); 
 };
     
 #endif /* ListNodeUtilities_hpp */
