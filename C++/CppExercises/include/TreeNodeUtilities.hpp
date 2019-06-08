@@ -14,6 +14,7 @@
 class TreeNodeUtilities{
 public:
     bool static isSameTree(TreeNode* p, TreeNode* q);
+    int static maxDepth(TreeNode* root);
 };
 
 #endif /* TreeNodeUtilities_hpp */
