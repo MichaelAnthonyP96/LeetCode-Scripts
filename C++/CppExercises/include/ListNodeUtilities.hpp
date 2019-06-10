@@ -6,16 +6,18 @@
 //  Copyright © 2019 Michael Anthony Pope. All rights reserved.
 //
 
-#ifndef ListNodeUtilities_h
-#define ListNodeUtilities_h
+#ifndef ListNodeUtilities_hpp
+#define ListNodeUtilities_hpp
 
 #include <stdio.h>
-#include "ListNode.h"
+#include "ListNode.hpp"
 
 class ListNodeUtilities{
 public:
     static ListNode* deleteDuplicates(ListNode* head);
-    static ListNode* addTwoNumbers(ListNode* l1, ListNode* l2); 
+    static ListNode* addTwoNumbers(ListNode* l1, ListNode* l2);
+    static int linkedListToInteger(ListNode* l);
+    static ListNode* integerToLinkedList(int num);
 };
     
 #endif /* ListNodeUtilities_hpp */

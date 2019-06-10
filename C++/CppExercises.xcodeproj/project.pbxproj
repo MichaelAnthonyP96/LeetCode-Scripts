@@ -35,12 +35,12 @@
 		E4546EAA22A8BD0F0048C094 /* TreeNodeUtilities.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TreeNodeUtilities.hpp; sourceTree = "<group>"; };
 		E4AA341422A770F2005E4780 /* CppExercises */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CppExercises; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4AA341722A770F2005E4780 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		E4AA341E22A7730D005E4780 /* ListNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListNode.h; sourceTree = "<group>"; };
+		E4AA341E22A7730D005E4780 /* ListNode.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = ListNode.hpp; sourceTree = "<group>"; };
 		E4AA341F22A77392005E4780 /* ListNode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ListNode.cpp; sourceTree = "<group>"; };
 		E4AA342122A7772F005E4780 /* ArrayUtilities.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ArrayUtilities.cpp; sourceTree = "<group>"; };
 		E4AA342222A7772F005E4780 /* ArrayUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrayUtilities.h; sourceTree = "<group>"; };
 		E4AA342422A77964005E4780 /* ListNodeUtilities.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ListNodeUtilities.cpp; sourceTree = "<group>"; };
-		E4AA342522A77964005E4780 /* ListNodeUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListNodeUtilities.h; sourceTree = "<group>"; };
+		E4AA342522A77964005E4780 /* ListNodeUtilities.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = ListNodeUtilities.hpp; sourceTree = "<group>"; };
 		E4AA342722A77BED005E4780 /* MathUtilities.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MathUtilities.cpp; sourceTree = "<group>"; };
 		E4AA342822A77BED005E4780 /* MathUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MathUtilities.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,8 +61,8 @@
 			children = (
 				E4546EA722A8BC650048C094 /* TreeNode.hpp */,
 				E4546EAA22A8BD0F0048C094 /* TreeNodeUtilities.hpp */,
-				E4AA341E22A7730D005E4780 /* ListNode.h */,
-				E4AA342522A77964005E4780 /* ListNodeUtilities.h */,
+				E4AA341E22A7730D005E4780 /* ListNode.hpp */,
+				E4AA342522A77964005E4780 /* ListNodeUtilities.hpp */,
 				E4AA342822A77BED005E4780 /* MathUtilities.h */,
 				E4AA342222A7772F005E4780 /* ArrayUtilities.h */,
 			);

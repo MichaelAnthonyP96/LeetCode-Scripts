@@ -7,7 +7,7 @@
 //
 
 #include <stdlib.h>
-#include "ListNode.h"
+#include "ListNode.hpp"
 
 ListNode::ListNode(const int x) : val(x), next(NULL) {}
 

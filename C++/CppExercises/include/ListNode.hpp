@@ -6,8 +6,8 @@
 //  Copyright © 2019 Michael Anthony Pope. All rights reserved.
 //
 
-#ifndef ListNode_h
-#define ListNode_h
+#ifndef ListNode_hpp
+#define ListNode_hpp
 
 class ListNode {
 public:

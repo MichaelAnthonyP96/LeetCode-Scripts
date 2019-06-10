@@ -6,8 +6,9 @@
 //  Copyright © 2019 Michael Anthony Pope. All rights reserved.
 //
 
-#include "ListNodeUtilities.h"
-#include "ListNode.h"
+#include "ListNodeUtilities.hpp"
+#include "ListNode.hpp"
+#include <cmath>
 
 ListNode* ListNodeUtilities::deleteDuplicates(ListNode* head) {
     if(head == NULL || head->next == NULL) return head;//base case
@@ -69,4 +70,39 @@ ListNode* ListNodeUtilities::addTwoNumbers(ListNode* l1, ListNode* l2) {
         l2 = l2->next;
     }
     return returnHeader;
+}
+
+int ListNodeUtilities::linkedListToInteger(ListNode* l){
+    //return value
+    int ret = 0;
+    //exponent value used to march through linked list
+    int exponent = 0;
+    //until the end of the list
+    while(l != NULL){
+        //Power function is accurately enlarge the current value by the proper power of ten
+        ret += (l->val * pow(10,exponent));
+        //increment the exponent and move onto the next Node
+        exponent++;
+        l = l->next;
     }
+    return ret;
+}
+
+ListNode* ListNodeUtilities::integerToLinkedList(int num){
+    //save the head of the list to return
+    ListNode* head = new ListNode(num % 10);
+    //pointer used to march through the list
+    ListNode* ptr = head;
+    //remove the last digit since we used it for the header
+    num /= 10;
+    //while the number is not zero
+    while(num > 0){
+        //create a new node initialized to the last digit in the number to attach to the end of the list
+        ptr->next = new ListNode(num % 10);
+        //march the pointer along
+        ptr = ptr->next;
+        //remove the last digit
+        num /= 10;
+    }
+    return head;
+}
