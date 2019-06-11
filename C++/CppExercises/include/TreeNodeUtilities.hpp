@@ -10,11 +10,16 @@
 #define TreeNodeUtilities_hpp
 
 #include "TreeNode.hpp"
+#include "string"
 
 class TreeNodeUtilities{
 public:
     static bool isSameTree(TreeNode* p, TreeNode* q);
     static int maxDepth(TreeNode* root);
+    static bool isSymmetric(TreeNode* root);
+    static void trimLeftTrailingSpaces(std::string &input);
+    static void trimRightTrailingSpaces(std::string &input);
+    static TreeNode* stringToTreeNode(std::string input); 
 };
 
 #endif /* TreeNodeUtilities_hpp */

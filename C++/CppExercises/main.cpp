@@ -7,11 +7,16 @@
 //
 
 #include <iostream>
-#include "ListNode.hpp"
-#include "ListNodeUtilities.hpp"
+//#include "ListNode.hpp"
+//#include "ListNodeUtilities.hpp"
+#include "TreeNode.hpp"
+#include "TreeNodeUtilities.hpp"
 
 int main(int argc, const char * argv[]) {
     
+    std::string j = "[1,2,2,3,4,4,3]";
+    TreeNode* t = TreeNodeUtilities::stringToTreeNode(j);
+    TreeNodeUtilities::isSymmetric(t);
     /*const char** v = argv;
     std::cout << v[3] << std::endl;
     std::cout << argc << std::endl;
