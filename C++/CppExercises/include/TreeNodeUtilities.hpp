@@ -19,7 +19,8 @@ public:
     static bool isSymmetric(TreeNode* root);
     static void trimLeftTrailingSpaces(std::string &input);
     static void trimRightTrailingSpaces(std::string &input);
-    static TreeNode* stringToTreeNode(std::string input); 
+    static TreeNode* stringToTreeNode(std::string input);
+    static int rangeSumBST(TreeNode* root, int L, int R);
 };
 
 #endif /* TreeNodeUtilities_hpp */
