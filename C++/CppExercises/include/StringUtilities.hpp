@@ -18,6 +18,7 @@ using namespace std;
 class StringUtilities{
 public:
     static string defangIPaddr(string address);
+    static int numJewelsInStones(string J, string S);
 };
 
 
