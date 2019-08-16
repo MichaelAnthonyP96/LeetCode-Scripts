@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E40D8EAE2305014700F3ACB6 /* StringUtilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E40D8EAC2305014700F3ACB6 /* StringUtilities.cpp */; };
 		E4546EA822A8BC650048C094 /* TreeNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4546EA622A8BC650048C094 /* TreeNode.cpp */; };
 		E4546EAB22A8BD0F0048C094 /* TreeNodeUtilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4546EA922A8BD0F0048C094 /* TreeNodeUtilities.cpp */; };
 		E4AA341822A770F2005E4780 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4AA341722A770F2005E4780 /* main.cpp */; };
@@ -29,6 +30,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E40D8EAC2305014700F3ACB6 /* StringUtilities.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StringUtilities.cpp; sourceTree = "<group>"; };
+		E40D8EAD2305014700F3ACB6 /* StringUtilities.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StringUtilities.hpp; sourceTree = "<group>"; };
 		E4546EA622A8BC650048C094 /* TreeNode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TreeNode.cpp; sourceTree = "<group>"; };
 		E4546EA722A8BC650048C094 /* TreeNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TreeNode.hpp; sourceTree = "<group>"; };
 		E4546EA922A8BD0F0048C094 /* TreeNodeUtilities.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TreeNodeUtilities.cpp; sourceTree = "<group>"; };
@@ -65,6 +68,7 @@
 				E4AA342522A77964005E4780 /* ListNodeUtilities.hpp */,
 				E4AA342822A77BED005E4780 /* MathUtilities.h */,
 				E4AA342222A7772F005E4780 /* ArrayUtilities.h */,
+				E40D8EAD2305014700F3ACB6 /* StringUtilities.hpp */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -77,6 +81,7 @@
 				E4AA342422A77964005E4780 /* ListNodeUtilities.cpp */,
 				E4AA341F22A77392005E4780 /* ListNode.cpp */,
 				E4546EA622A8BC650048C094 /* TreeNode.cpp */,
+				E40D8EAC2305014700F3ACB6 /* StringUtilities.cpp */,
 				E4546EA922A8BD0F0048C094 /* TreeNodeUtilities.cpp */,
 			);
 			path = src;
@@ -171,6 +176,7 @@
 				E4AA341822A770F2005E4780 /* main.cpp in Sources */,
 				E4AA342022A77392005E4780 /* ListNode.cpp in Sources */,
 				E4546EAB22A8BD0F0048C094 /* TreeNodeUtilities.cpp in Sources */,
+				E40D8EAE2305014700F3ACB6 /* StringUtilities.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

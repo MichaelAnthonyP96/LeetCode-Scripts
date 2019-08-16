@@ -7,6 +7,11 @@
 //
 
 #include "MathUtilities.h"
+#include <string>
+#include <vector>
+#include <iostream>
+#include <sstream>
+#include <set>
 
 int MathUtilities::mySqrt(int x) {
     /*Compute and return the square root of x, where x is guaranteed to be a non-negative integer.
@@ -48,3 +53,120 @@ int MathUtilities::climbStairs(int n) {
     }
     return array[n-1];
 }
+
+std::string MathUtilities::addBinary(std::string a, std::string b) {
+    std::vector<char> v;
+    int A = std::stoi(a);
+    int B = std::stoi(b);
+    int Apop = 0;
+    int Bpop = 0;
+    bool carry = false;
+    do{
+        Apop = A % 10;
+        A = A / 10;
+        Bpop = B % 10;
+        B = B / 10;
+        if( (Apop == 0) && (Bpop == 0) ){
+            if(carry == false){
+//                std::stringstream temp;
+//                temp << ss.rdbuf();
+//                temp << '0';
+//                ss = std::move(temp);
+                v.push_back('0');
+                continue;
+            }
+            else{
+//                std::stringstream temp;
+//                temp << ss.rdbuf();
+//                temp << '1';
+//                ss = std::move(temp);
+                v.push_back('1');
+                carry = false;
+                continue;
+            }
+        }
+        if( ((Apop == 0) && (Bpop == 1)) || ((Apop == 1) && (Bpop == 0)) ){
+            if(carry == false){
+//                std::stringstream temp;
+//                temp << ss.rdbuf();
+//                temp << '1';
+//                ss = std::move(temp);
+                v.push_back('1');
+                continue;
+            }
+            else{
+//                std::stringstream temp;
+//                temp << ss.rdbuf();
+//                temp << '0';
+//                ss = std::move(temp);
+                v.push_back('0');
+                carry = true;
+                continue;
+            }
+        }
+        if((Apop == 1) && (Bpop == 1)){
+            if(carry == false){
+//                std::stringstream temp;
+//                temp << ss.rdbuf();
+//                temp << '0';
+//                ss = std::move(temp);
+                v.push_back('0');
+                carry = true;
+                continue;
+            }
+            else{
+//                std::stringstream temp;
+//                temp << ss.rdbuf();
+//                temp << '1';
+//                ss = std::move(temp);
+                v.push_back('1');
+                carry = true;
+                continue;
+            }
+        }
+    }while( (A != 0) || (B != 0) );
+    if(carry == true) v.push_back('1');
+    std::stringstream ss;
+    for(auto it = v.rbegin(); it != v.rend(); it++){
+        ss << *it;
+    }
+    return ss.str();
+}
+
+//Given an array, rotate the array to the right by k steps, where k is non-negative.
+void MathUtilities::rotate(std::vector<int>& nums, int k) {
+    std::vector<int> v;
+    short s = nums.size();
+    if(k > s) k = k % s;
+    int kk = k;
+    //copy the last k elements
+    for(; kk > 0; --kk){
+        v.push_back(nums[s - kk]);
+    }
+     //shift s - k elements k to the right
+     for(int i = s - k - 1; i >= 0; --i ){
+         nums[i + k] = nums[i];
+     }
+     //insert the first k elements
+     for(int h = 0; h < k; ++h){
+         nums[h] = v[h];
+     }
+}
+
+//Given a non-empty array of integers, every element appears twice except for one. Find that single one.
+int singleNumber(vector<int>& nums) {
+    if(nums.size() == 1) return nums[0];
+    std::set<int> s;
+    s.insert(nums[0]);
+    set<int>::iterator it;
+    set<int>::iterator e = s.end();
+    for(int i = 1; i < nums.size(); ++i){
+        it = s.find(nums[i]);
+        if(it == e)
+            s.insert(nums[i]);
+        else
+            s.erase(it);
+    }
+    return *(s.begin());
+}
+

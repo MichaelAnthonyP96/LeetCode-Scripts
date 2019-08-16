@@ -47,7 +47,7 @@ bool TreeNodeUtilities::isSymmetric(TreeNode* root) {
         unsigned long c = q.size();
         if(c == 0) break; //no more nodes to process
         std::deque<int> dq;//double sided queue
-        TreeNode* tmp;
+        TreeNode* tmp = NULL;
         //while c is greater than 0
         while(c--){
             TreeNode* curr = q.front();
