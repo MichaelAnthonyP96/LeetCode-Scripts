@@ -39,3 +39,12 @@ int StringUtilities::numJewelsInStones(string J, string S) {
     }
     return ret;
 }
+
+//Implement function ToLowerCase() that has a string parameter str, and returns the same string in lowercase.
+string StringUtilities::toLowerCase(string str) {
+    std::string s;
+    for(int i = 0; i < str.length(); ++i){
+        s.insert(s.end(), std::tolower(str[i]));
+    }
+    return s;
+}

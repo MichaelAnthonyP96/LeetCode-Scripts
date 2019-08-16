@@ -19,6 +19,7 @@ class StringUtilities{
 public:
     static string defangIPaddr(string address);
     static int numJewelsInStones(string J, string S);
+    static string toLowerCase(string str);
 };
 
 
