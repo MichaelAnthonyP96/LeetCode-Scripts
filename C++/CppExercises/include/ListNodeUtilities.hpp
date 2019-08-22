@@ -18,6 +18,8 @@ public:
     static ListNode* addTwoNumbers(ListNode* l1, ListNode* l2);
     static int linkedListToInteger(ListNode* l);
     static ListNode* integerToLinkedList(int num);
+    static ListNode* middleNode(ListNode* head);
+    static ListNode* reverseList(ListNode* head);
 };
     
 #endif /* ListNodeUtilities_hpp */

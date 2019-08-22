@@ -12,6 +12,7 @@
 class ListNode {
 public:
     ListNode(int x); //constructor
+    ListNode(int x, ListNode* next); // constructor
     virtual ~ListNode(); //destructor
     ListNode* next; //ListNode pointer next
     int val; //Value

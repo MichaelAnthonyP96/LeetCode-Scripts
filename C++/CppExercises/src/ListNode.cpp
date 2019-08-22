@@ -11,6 +11,8 @@
 
 ListNode::ListNode(const int x) : val(x), next(NULL) {}
 
+ListNode::ListNode(const int x, ListNode* next) : val(x), next(next) {}
+
 ListNode::~ListNode() {
     next = NULL;
     delete next;

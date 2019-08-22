@@ -163,11 +163,15 @@ using namespace std;
 //    return 0;
 //}
 
-#include "StringUtilities.hpp"
+#include "ListNode.hpp"
+#include "ListNodeUtilities.hpp"
 #include <iostream>
 
 int main(){
-    std::string s("1.1.1.1");
-    
-    std::cout << StringUtilities::defangIPaddr(s);
+    ListNode* l5 = new ListNode(5,NULL);
+    ListNode* l4 = new ListNode(4, l5);
+    ListNode* l3 = new ListNode(3, l4);
+    ListNode* l2 = new ListNode(2, l3);
+    ListNode* l1 = new ListNode(1, l2);
+    ListNodeUtilities::reverseList(l1);
 }

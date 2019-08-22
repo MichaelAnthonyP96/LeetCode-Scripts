@@ -106,3 +106,33 @@ ListNode* ListNodeUtilities::integerToLinkedList(int num){
     }
     return head;
 }
+
+/*Given a non-empty, singly linked list with head node head, return a middle node of the linked list.
+ *If there are two middle nodes, return the second middle node. O(n) time, O(1) space
+ */
+ListNode* ListNodeUtilities::middleNode(ListNode* head) {
+    int count = 0;
+    ListNode* temp = head;
+    for(; temp != NULL; temp = temp->next){
+        count++;
+    }
+    count = (count/2) + 1;
+    temp = head;
+    for(int i = 1; i < count; i++){
+        temp = temp->next;
+    }
+    return temp;
+}
+
+//Reverse a singly linked list. O(n) time and O(1) space
+ListNode* ListNodeUtilities::reverseList(ListNode* head) {
+    ListNode* temp1 = head;
+    ListNode* temp2 = head->next;
+    ListNode* temp3 = NULL;
+    head->next = NULL;
+    for( ; temp2 != NULL; temp1 = temp2, temp2 = temp3){
+        temp3 = temp2->next;
+        temp2->next = temp1;
+    }
+    return temp1;
+}
