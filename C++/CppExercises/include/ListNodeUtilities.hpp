@@ -20,6 +20,7 @@ public:
     static ListNode* integerToLinkedList(int num);
     static ListNode* middleNode(ListNode* head);
     static ListNode* reverseList(ListNode* head);
+    static void deleteNode(ListNode* node);
 };
     
 #endif /* ListNodeUtilities_hpp */

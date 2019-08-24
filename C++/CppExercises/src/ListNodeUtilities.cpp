@@ -126,6 +126,7 @@ ListNode* ListNodeUtilities::middleNode(ListNode* head) {
 
 //Reverse a singly linked list. O(n) time and O(1) space
 ListNode* ListNodeUtilities::reverseList(ListNode* head) {
+    if(head == NULL || head->next == NULL) return head;
     ListNode* temp1 = head;
     ListNode* temp2 = head->next;
     ListNode* temp3 = NULL;
@@ -135,4 +136,16 @@ ListNode* ListNodeUtilities::reverseList(ListNode* head) {
         temp2->next = temp1;
     }
     return temp1;
+}
+
+/*Write a function to delete a node (except the tail) in a singly linked list, given only access to that node.
+ *The linked list will have at least two elements.
+ *All of the nodes' values will be unique.
+ *The given node will not be the tail and it will always be a valid node of the linked list.
+ */
+void ListNodeUtilities::deleteNode(ListNode* node) {
+    ListNode* temp = node->next;
+    node->val = temp->val;
+    node->next = temp->next;
+    delete temp;
 }
