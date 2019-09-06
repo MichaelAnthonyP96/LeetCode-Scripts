@@ -146,3 +146,17 @@ int TreeNodeUtilities::rangeSumBST(TreeNode* root, int L, int R) {
         }
     }
 }
+
+//A binary tree is univalued if every node in the tree has the same value.
+bool TreeNodeUtilities::isUnivalTree(TreeNode* root) {
+    if(root == NULL) return true;
+    if(root->right != NULL){
+        if(root->val != root->right->val)
+            return false;
+    }
+    if(root->left != NULL){
+        if(root->val != root->left->val)
+            return false;
+    }
+    return isUnivalTree(root->right) && isUnivalTree(root->left);
+}
