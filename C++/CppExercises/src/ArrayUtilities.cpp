@@ -56,4 +56,24 @@ std::vector<std::vector<int>> ArrayUtilities::flipAndInvertImage(std::vector<std
     return B;
 }
 
+/*
+ * Given an array A of non-negative integers, return an array consisting of all the even elements of A, followed
+ * by all the odd elements of A.
+ * You may return any answer array that satisfies this condition.
+ */
+
+std::vector<int> sortArrayByParity(std::vector<int>& A) {
+    std::vector<int> even, odd;
+    for(int i = 0; i < A.size(); ++i){
+        // Even case, add to the even vector
+        if((A[i] % 2) == 0){
+            even.push_back(A[i]);
+        } else { // Odd case, add to the odd vector
+            odd.push_back(A[i]);
+        }
+    }
+    even.insert(even.end(), odd.begin(), odd.end());
+    return even;
+}
+
 
