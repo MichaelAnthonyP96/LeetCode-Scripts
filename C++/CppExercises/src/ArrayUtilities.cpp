@@ -62,7 +62,7 @@ std::vector<std::vector<int>> ArrayUtilities::flipAndInvertImage(std::vector<std
  * You may return any answer array that satisfies this condition.
  */
 
-std::vector<int> sortArrayByParity(std::vector<int>& A) {
+std::vector<int> ArrayUtilities::sortArrayByParity(std::vector<int>& A) {
     std::vector<int> even, odd;
     for(int i = 0; i < A.size(); ++i){
         // Even case, add to the even vector
@@ -76,4 +76,24 @@ std::vector<int> sortArrayByParity(std::vector<int>& A) {
     return even;
 }
 
-
+/*Given an array of integers A sorted in non-decreasing order, return an array of the squares of each
+ *number, also in sorted non-decreasing order.
+ */
+std::vector<int> ArrayUtilities::sortedSquares(std::vector<int>& A) {
+    std::vector<int> ret(A.size());
+    int a, b;
+    for(int i = 0, j = A.size() - 1, it = A.size() - 1; i <= j; ){
+        a = A[i] * A[i];
+        b = A[j] * A[j];
+        if(a >= b){
+            ret[it] = a;
+            --it;
+            i++;
+        } else {
+            ret[it] = b;
+            --it;
+            --j;
+        }
+    }
+    return ret;
+}

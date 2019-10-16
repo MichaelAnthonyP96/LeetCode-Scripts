@@ -17,6 +17,8 @@ public:
     static void mergeSortedArrays(std::vector<int>& nums1, int m, std::vector<int>& nums2, int n);
     static std::vector<std::vector<int>> flipAndInvertImage(std::vector<std::vector<int>>& A);
     static std::vector<int> sortArrayByParity(std::vector<int>& A);
+    std::vector<int> sortedSquares(std::vector<int>& A);
+
 };
 
 #endif /* ArrayUtilities_hpp */
