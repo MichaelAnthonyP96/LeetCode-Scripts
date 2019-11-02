@@ -97,3 +97,13 @@ std::vector<int> ArrayUtilities::sortedSquares(std::vector<int>& A) {
     }
     return ret;
 }
+
+std::vector<std::vector<int>> ArrayUtilities::transpose(std::vector<std::vector<int>>& A) {
+    std::vector<std::vector<int>> ret(A[0].size());
+    for(int i = 0; i < A.size(); ++i){
+        for(int j = 0; j < A[0].size(); ++j){
+            ret[j].push_back(A[i][j]);
+        }
+    }
+    return ret;
+}
