@@ -107,3 +107,22 @@ std::vector<std::vector<int>> ArrayUtilities::transpose(std::vector<std::vector<
     }
     return ret;
 }
+
+// O(n) runtime maxSub Array Algorithm
+// O(1) space required
+// Considered an "online" algorithm b/c it requres constant space,
+// runs in linear time and can return the solution at any time with
+// only the data that it currently has
+
+int ArrayUtilities::maxSubArray(std::vector<int>& nums) {
+    
+    int thisSum = 0, maxSum = INT_MIN;
+    for(int i = 0; i < nums.size(); ++i){
+        thisSum += nums[i];
+        if(thisSum > maxSum)
+            maxSum = thisSum;
+        if(thisSum < 0)
+            thisSum = 0;
+    }
+    return maxSum;
+}
