@@ -22,6 +22,7 @@ public:
     static TreeNode* stringToTreeNode(std::string input);
     static int rangeSumBST(TreeNode* root, int L, int R);
     static bool isUnivalTree(TreeNode* root);
+    static TreeNode* searchBST(TreeNode* root, int val); 
 };
 
 #endif /* TreeNodeUtilities_hpp */

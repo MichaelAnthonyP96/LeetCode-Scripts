@@ -160,3 +160,17 @@ bool TreeNodeUtilities::isUnivalTree(TreeNode* root) {
     }
     return isUnivalTree(root->right) && isUnivalTree(root->left);
 }
+
+TreeNode* TreeNodeUtilities::searchBST(TreeNode* root, int val) {
+    //if(root == NULL) return root;
+    while(root != NULL && root->val != val){
+        if(val < root->val)
+            root = root->left;
+        else if(val > root->val){
+            root = root->right;
+        } else {
+            return root;
+        }
+    }
+    return root;
+}
