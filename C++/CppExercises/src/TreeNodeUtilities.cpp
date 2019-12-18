@@ -174,3 +174,23 @@ TreeNode* TreeNodeUtilities::searchBST(TreeNode* root, int val) {
     }
     return root;
 }
+
+bool TreeNodeUtilities::isLeaf(TreeNode* root){
+    if(root == NULL) return false;
+    else if(root->left != NULL){
+        return false;
+    } else if(root->right != NULL){
+        return false;
+    } else {
+        return true;
+    }
+}
+
+int TreeNodeUtilities::sumOfLeftLeaves(TreeNode* root) {
+    if(root == NULL) return 0;
+    if(isLeaf(root->left)){
+        return root->left->val + sumOfLeftLeaves(root->right);
+    } else {
+        return sumOfLeftLeaves(root->left) + sumOfLeftLeaves(root->right);
+    }
+}
