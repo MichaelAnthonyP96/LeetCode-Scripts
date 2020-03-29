@@ -48,3 +48,45 @@ string StringUtilities::toLowerCase(string str) {
     }
     return s;
 }
+
+// Given a string S and a character C, return an array of integers representing
+// the shortest distance from the character C in the string.
+std::vector<int> StringUtilities::shortestToChar(std::string S, char C) {
+  std::vector<int> ret(S.length(), INT_MAX);
+
+  for (int i = 0; i < S.length(); ++i) {
+    if (S[i] == C) {
+      ret[i] = 0;
+      // update left of the found char
+      for (int j = i - 1; j >= 0; --j) {
+        if (S[j] == C) {
+          // we found another match, stop searching left
+          break;
+        }
+        if (ret[j] > ret[j + 1]) {
+          // update the values to the left
+          ret[j] = ret[j + 1] + 1;
+        } else { // if the value is equal to or less than, no need to
+                 // continue updating
+          break;
+        }
+      }
+      // update right of the found char
+      for (int k = i + 1; k < S.length(); ++k) {
+        if (S[k] == C) {
+          // we found another match, stop searching right. Advance i to that
+          // position
+          ret[k] = 0;
+          i = k - 1; // ++ operator will bring i to position k at next loop
+                     // iteration
+          break;
+        }
+        if (ret[k] > ret[k - 1]) {
+          // update the values to the left
+          ret[k] = ret[k - 1] + 1;
+        }
+      }
+    }
+  }
+  return ret;
+}

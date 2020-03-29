@@ -12,15 +12,16 @@
 #include <stdio.h>
 //#include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
-class StringUtilities{
+class StringUtilities {
 public:
-    static string defangIPaddr(string address);
-    static int numJewelsInStones(string J, string S);
-    static string toLowerCase(string str);
+  static string defangIPaddr(string address);
+  static int numJewelsInStones(string J, string S);
+  static string toLowerCase(string str);
+  static std::vector<int> shortestToChar(std::string S, char C);
 };
 
-
-#endif /* StringUtilities_hpp */
+#endif // StringUtilities_hpp
