@@ -13,8 +13,17 @@ add_executable(runStringUtilTests stringUtilTests.cpp)
 target_link_libraries(runStringUtilTests PUBLIC catch stringUtil)
 target_include_directories(runStringUtilTests
         PUBLIC
-        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/>)
+        $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include/>)
+
+add_executable(runMathUtilTests ${CMAKE_CURRENT_SOURCE_DIR}/mathUtilTests.cpp)
+target_link_libraries(runMathUtilTests PUBLIC catch mathUtil)
+target_include_directories(runMathUtilTests
+        PUBLIC
+        $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include/>)
 
 add_test(NAME stringUtilTests
+        COMMAND ${PROJECT_BINARY_DIR}/bin/runStringUtilTests
+        WORKING_DIRECTORY ${PROJECT_BINARY_DIR}/)
+add_test(NAME mathUtilTests
         COMMAND ${PROJECT_BINARY_DIR}/bin/runStringUtilTests
         WORKING_DIRECTORY ${PROJECT_BINARY_DIR}/)

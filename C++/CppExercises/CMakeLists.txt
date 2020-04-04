@@ -104,8 +104,14 @@ target_include_directories(stringUtil
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
         $<INSTALL_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>)
 
+add_library(mathUtil SHARED ${CMAKE_CURRENT_SOURCE_DIR}/src/MathUtilities.cpp)
+target_include_directories(mathUtil
+        PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+        $<INSTALL_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>)
+
 add_executable(main ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp)
-target_link_libraries(main PUBLIC arrayUtil stringUtil)
+target_link_libraries(main PUBLIC arrayUtil stringUtil mathUtil)
 
 # Documentation
 #option(BUILD_DOCUMENTATION "Create and install the HTML based API documentation (requires Doxygen)" OFF)
