@@ -21,6 +21,9 @@ public:
     static std::string addBinary(std::string a, std::string b);
     static void rotate(std::vector<int>& nums, int k);
     static int singleNumber(vector<int>& nums);
+    static bool isHappy(int n);
+    static int sumDigitSquares(int n);
+    static void moveZeroes(std::vector<int>& nums);
 };
 
 #endif /* MathUtilities_hpp */
