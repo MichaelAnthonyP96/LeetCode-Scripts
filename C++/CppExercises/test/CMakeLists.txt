@@ -21,9 +21,18 @@ target_include_directories(runMathUtilTests
         PUBLIC
         $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include/>)
 
+add_executable(runArrayUtilTests ${CMAKE_CURRENT_SOURCE_DIR}/arrayUtilTests.cpp)
+target_link_libraries(runArrayUtilTests PUBLIC catch arrayUtil)
+target_include_directories(runArrayUtilTests
+        PUBLIC
+        $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include/>)
+
 add_test(NAME stringUtilTests
         COMMAND ${PROJECT_BINARY_DIR}/bin/runStringUtilTests
         WORKING_DIRECTORY ${PROJECT_BINARY_DIR}/)
 add_test(NAME mathUtilTests
-        COMMAND ${PROJECT_BINARY_DIR}/bin/runStringUtilTests
+        COMMAND ${PROJECT_BINARY_DIR}/bin/runMathUtilTests
+        WORKING_DIRECTORY ${PROJECT_BINARY_DIR}/)
+add_test(NAME arrayUtilTests
+        COMMAND ${PROJECT_BINARY_DIR}/bin/runArrayUtilTests
         WORKING_DIRECTORY ${PROJECT_BINARY_DIR}/)

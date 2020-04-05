@@ -20,7 +20,7 @@ public:
     static std::vector<int> sortedSquares(std::vector<int>& A);
     static std::vector<std::vector<int>> transpose(std::vector<std::vector<int>>& A);
     static int maxSubArray(std::vector<int>& nums);
-
+    static int maxProfit(std::vector<int>& prices);
 };
 
 #endif /* ArrayUtilities_hpp */

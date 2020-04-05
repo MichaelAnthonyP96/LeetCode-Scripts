@@ -126,3 +126,45 @@ int ArrayUtilities::maxSubArray(std::vector<int>& nums) {
     }
     return maxSum;
 }
+
+/**
+ * \brief Design an algorithm to find the maximum profit.
+ *
+ * Say you have an array for which the ith element is the price of a given stock
+ * on day i. You may complete as manytransactions as you like (i.e., buy one and
+ * sell one share of the stock multiple times).
+ *
+ * Note: You may not engage in multiple transactions at the same time (i.e., you
+ * must sell the stock before you buy again).
+ * @param prices list of prices at given time intervals
+ * @return the maximum profit over that entire time interval
+ */
+
+int ArrayUtilities::maxProfit(std::vector<int> &prices) {
+  int profit = 0, size = prices.size();
+  std::vector<int> profits(size, 0);
+  std::vector<int> previous(size, 0);
+  for (int i = 0; i < (size - 1); ++i) {
+    if (prices[i] < prices[i + 1]) {
+      // opportunity for profit
+      profits[i] = prices[i + 1] - prices[i];
+      previous[i + 1] = i;
+      // more money could've been made if the stock was bought earlier
+      if (profits[previous[i]] > profits[i]) {
+        int itr = i;
+        while (previous[itr] != 0) {
+          // reset the profit value, since that transaction now will not happen
+          profits[itr] = 0;
+          itr = previous[itr];
+        }
+        profits[itr] = prices[i + 1] - prices[itr];
+      }
+    }
+  }
+
+  // loop over the profits vector and sum up the transactions
+  for (int j = 0; j < size; ++j) {
+    profit += profits[j];
+  }
+  return profit;
+}
