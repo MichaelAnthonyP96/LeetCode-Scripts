@@ -22,6 +22,7 @@ public:
   static int numJewelsInStones(string J, string S);
   static string toLowerCase(string str);
   static std::vector<int> shortestToChar(std::string S, char C);
+  static bool repeatedSubstringPattern(string s);
 };
 
 #endif // StringUtilities_hpp
