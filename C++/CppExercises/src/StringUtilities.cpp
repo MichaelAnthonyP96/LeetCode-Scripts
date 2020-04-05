@@ -112,16 +112,19 @@ bool StringUtilities::repeatedSubstringPattern(string s) {
   int subLength = 1;
   string substr, compare;
   while (subLength <= s.length()) {
+    // if the substring is not an integer multiple of the original length,
+    // then it is not a valid length
+    if (s.length() % subLength != 0) {
+      ++subLength;
+      continue;
+    }
+    // a valid substring cannot be more than half the original string
     if (subLength > (s.length() / 2)) {
       return false;
     }
     substr = s.substr(0, subLength);
     compare = s.substr(subLength, s.length() - subLength);
     if (compare.find(substr) != string::npos) {
-      if (s.length() % subLength != 0) {
-        ++subLength;
-        continue;
-      }
       int multiplier = s.length() / subLength;
       compare = substr;
       for (int i = 1; i < multiplier; ++i) {
