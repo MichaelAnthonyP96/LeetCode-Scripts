@@ -21,6 +21,9 @@ public:
     static std::vector<std::vector<int>> transpose(std::vector<std::vector<int>>& A);
     static int maxSubArray(std::vector<int>& nums);
     static int maxProfit(std::vector<int>& prices);
+    static std::vector<int> sortArray(std::vector<int>& nums);
+    static std::vector<int> mergeTwoSortedArrays(std::vector<int> l1, std::vector<int> l2);
+    static std::vector<int> mergeSortAscending(std::vector<int>& nums);
 };
 
 #endif /* ArrayUtilities_hpp */

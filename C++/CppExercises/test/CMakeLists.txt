@@ -36,3 +36,6 @@ add_test(NAME mathUtilTests
 add_test(NAME arrayUtilTests
         COMMAND ${PROJECT_BINARY_DIR}/bin/runArrayUtilTests
         WORKING_DIRECTORY ${PROJECT_BINARY_DIR}/)
+add_test(NAME listNodeUtilTests
+        COMMAND ${PROJECT_BINARY_DIR}/bin/runListNodeUtilTests
+        WORKING_DIRECTORY ${PROJECT_BINARY_DIR}/)

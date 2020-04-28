@@ -168,3 +168,47 @@ int ArrayUtilities::maxProfit(std::vector<int> &prices) {
   }
   return profit;
 }
+
+std::vector<int> ArrayUtilities::sortArray(std::vector<int> &nums) {
+  return mergeSortAscending(nums);
+}
+
+std::vector<int> ArrayUtilities::mergeTwoSortedArrays(std::vector<int> l1, std::vector<int> l2) {
+  int idx = 0;
+  std::vector<int> ret(l1.size() + l2.size());
+  auto it1 = l1.begin(), it2 = l2.begin();
+  while (it1 != l1.end() || it2 != l2.end()) {
+    if (it1 == l1.end()) {
+      ret[idx++] = *it2++;
+    } else if (it2 == l2.end()) {
+      ret[idx++] = *it1++;
+    } else if (*it1 <= *it2) {
+      ret[idx++] = *it1++;
+    } else {
+      ret[idx++] = *it2++;
+    }
+  }
+  return ret;
+}
+
+std::vector<int> ArrayUtilities::mergeSortAscending(std::vector<int> &nums) {
+  // base case - comparing two neighboring indices
+  if (nums.size() == 1) {
+    return nums;
+  } else if (nums.size() == 2) {
+    // swap the two if low is
+    if (nums[0] > nums[1]) {
+      std::swap(nums[0], nums[1]);
+    }
+    return nums;
+  } else {
+    // recursively sort the left and right halves of the array
+    int middle = nums.size() / 2;
+    // merge the two sorted halves together
+    std::vector<int> v1(nums.begin(), nums.begin() + middle);
+    std::vector<int> v2(nums.begin() + middle, nums.begin() + nums.size());
+    v1 = mergeSortAscending(v1);
+    v2 = mergeSortAscending(v2);
+    return mergeTwoSortedArrays(v1, v2);
+  }
+}
