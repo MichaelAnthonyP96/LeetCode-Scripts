@@ -110,6 +110,14 @@ target_include_directories(mathUtil
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
         $<INSTALL_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>)
 
+add_library(listUtil SHARED
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/ListNodeUtilities.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/ListNode.cpp)
+target_include_directories(listUtil
+        PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+        $<INSTALL_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>)
+
 add_executable(main ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp)
 target_link_libraries(main PUBLIC arrayUtil stringUtil mathUtil)
 

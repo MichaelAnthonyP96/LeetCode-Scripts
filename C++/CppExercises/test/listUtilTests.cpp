@@ -12,6 +12,15 @@ TEST_CASE("sortList", "") {
   l2.next = &l1;
   l1.next = &l3;
 
-  ListNodeUtilities::sortList(&l4);
+  ListNode* result = ListNodeUtilities::insertionSort(&l4);
+  REQUIRE(result->val == 1);
+  result = result->next;
+  REQUIRE(result->val == 2);
+  result = result->next;
+  REQUIRE(result->val == 3);
+  result = result->next;
+  REQUIRE(result->val == 4);
+  result = result->next;
+  REQUIRE(result == nullptr);
 
 }

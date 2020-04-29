@@ -21,6 +21,7 @@ public:
     static ListNode* middleNode(ListNode* head);
     static ListNode* reverseList(ListNode* head);
     static void deleteNode(ListNode* node);
+    static ListNode* insertionSort(ListNode* head);
 };
     
 #endif /* ListNodeUtilities_hpp */

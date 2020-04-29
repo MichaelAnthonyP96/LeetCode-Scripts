@@ -27,6 +27,12 @@ target_include_directories(runArrayUtilTests
         PUBLIC
         $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include/>)
 
+add_executable(runListNodeUtilTests ${CMAKE_CURRENT_SOURCE_DIR}/listUtilTests.cpp)
+target_link_libraries(runListNodeUtilTests PUBLIC catch listUtil)
+target_include_directories(runListNodeUtilTests
+        PUBLIC
+        $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include/>)
+
 add_test(NAME stringUtilTests
         COMMAND ${PROJECT_BINARY_DIR}/bin/runStringUtilTests
         WORKING_DIRECTORY ${PROJECT_BINARY_DIR}/)
