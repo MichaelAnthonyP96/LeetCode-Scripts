@@ -219,6 +219,18 @@ std::vector<int> ArrayUtilities::mergeSortAscending(std::vector<int> &nums) {
   }
 }
 
+/**
+ * \brief Design an algorithm to determine is a sequence is a numerical
+ * progression
+ *
+ * Given an array of numbers arr. A sequence of numbers is called an arithmetic
+ * progression if the difference between any two consecutive elements is the
+ * same.
+ *
+ * @param arr numerical sequence to evaluate
+ * @return true if the array can be rearranged to form an arithmetic
+ * progression, otherwise, return false.
+ */
 bool ArrayUtilities::canMakeArithmeticProgression(std::vector<int> &arr) {
   if (arr.empty() || arr.size() == 1) {
     return true;
