@@ -35,6 +35,14 @@ TEST_CASE("mergeSort", "Ascending") {
 
 }
 
+TEST_CASE("Arthimetic Progress", "Sequence") {
+  std::vector<int> nums = {5, 2, 3, 1, 4};
+  REQUIRE(ArrayUtilities::canMakeArithmeticProgression(nums));
+
+  std::vector<int> nums2 = {3, 5, 1};
+  REQUIRE(ArrayUtilities::canMakeArithmeticProgression(nums2));
+}
+
 //TEST_CASE("mergeSort", "") {
 //  std::vector<int> nums = {5, 1, 1, 2, 0, 0};
 //  std::vector<int> result = ArrayUtilities::sortArray(nums);

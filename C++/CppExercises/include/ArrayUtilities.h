@@ -9,7 +9,7 @@
 #ifndef ArrayUtilities_h
 #define ArrayUtilities_h
 
-#include <stdio.h>
+#include <cstdio>
 #include <vector>
 
 class ArrayUtilities{
@@ -24,6 +24,7 @@ public:
     static std::vector<int> sortArray(std::vector<int>& nums);
     static std::vector<int> mergeTwoSortedArrays(std::vector<int> l1, std::vector<int> l2);
     static std::vector<int> mergeSortAscending(std::vector<int>& nums);
+    static bool canMakeArithmeticProgression(std::vector<int>& arr);
 };
 
 #endif /* ArrayUtilities_hpp */
