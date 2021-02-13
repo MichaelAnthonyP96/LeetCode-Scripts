@@ -6,23 +6,21 @@
 //  Copyright © 2019 Michael Anthony Pope. All rights reserved.
 //
 
-#ifndef StringUtilities_hpp
-#define StringUtilities_hpp
+#pragma once
 
-#include <stdio.h>
+#include <cstdio>
 //#include <iostream>
 #include <string>
 #include <vector>
 
-using namespace std;
-
 class StringUtilities {
 public:
-  static string defangIPaddr(string address);
-  static int numJewelsInStones(string J, string S);
-  static string toLowerCase(string str);
+  static std::string defangIPaddress(std::string address);
+  static int numJewelsInStones(std::string J, std::string S);
+  static std::string toLowerCase(std::string str);
   static std::vector<int> shortestToChar(std::string S, char C);
-  static bool repeatedSubstringPattern(string s);
+  static bool repeatedSubstringPattern(const std::string &s);
+  static std::vector<std::vector<std::string>>
+  groupAnagrams(std::vector<std::string> &strs);
+  static bool parseCSV(const std::string &fileName);
 };
-
-#endif // StringUtilities_hpp
