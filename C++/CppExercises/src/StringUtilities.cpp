@@ -13,10 +13,12 @@
 #include <map>
 #include <sstream>
 
-// TODO(mapope): add tests for stringUtil methods
-// TODO(mapope): add doxygen to all stringUtil methods
-// Given a valid (IPv4) IP address, return a defanged version of that IP
-// address. A defanged IP address replaces every period "." with "[.]".
+/**
+ * \brief Given a valid (IPv4) IP address, return a defanged version of that IP
+ * address. A defanged IP address replaces every period "." with "[.]".
+ * \param IP address to de-fang
+ * \return The IP address in the correct format
+ */
 std::string StringUtilities::defangIPaddress(std::string address) {
   size_t f = 0;
   size_t place = 0;
@@ -32,13 +34,18 @@ std::string StringUtilities::defangIPaddress(std::string address) {
   return address;
 }
 
-// You're given strings J representing the types of stones that are jewels, and
-// S representing the stones you have. Each character in S is a type of stone
-// you have.  You want to know how many of the stones you have are also jewels.
-// The letters in J are guaranteed distinct, and all characters in J and S are
-// letters. Letters are case sensitive, so "a" is considered a different type of
-// stone from "A".
-int StringUtilities::numJewelsInStones(std::string J, std::string S) {
+/**
+ * \brief You're given strings J representing the types of stones that are
+ * jewels, and S representing the stones you have. Each character in S is a type
+ * of stone you have.  You want to know how many of the stones you have are also
+ * jewels. The letters in J are guaranteed distinct, and all characters in J and
+ * S are letters. Letters are case sensitive, so "a" is considered a different
+ * type of stone from "A".
+ * \param J Types of stones that are jewels
+ * \param S String representing a set of jewels
+ * \return Return the number of jewels found in the set
+ */
+int StringUtilities::numJewelsInStones(const std::string &J, std::string S) {
   std::string::iterator it = S.begin();
   int ret = 0;
   while (it != S.end()) {
@@ -50,18 +57,26 @@ int StringUtilities::numJewelsInStones(std::string J, std::string S) {
   return ret;
 }
 
-// Implement function ToLowerCase() that has a string parameter str, and returns
-// the same string in lowercase.
-std::string StringUtilities::toLowerCase(std::string str) {
+/**
+ * \brief Helper function to convert a string to lowercase.
+ * \param str String to manipulate
+ * \return The string in lowercase format
+ */
+std::string StringUtilities::toLowerCase(const std::string &str) {
   std::string s;
-  for (int i = 0; i < str.length(); ++i) {
-    s.insert(s.end(), std::tolower(str[i]));
+  for (char i : str) {
+    s.insert(s.end(), std::tolower(i));
   }
   return s;
 }
 
-// Given a string S and a character C, return an array of integers representing
-// the shortest distance from the character C in the string.
+/**
+ * \brief Given a string S and a character C, return an array of integers
+ * representing the shortest distance from the character C in the string.
+ * \param S String to examine
+ * \param C Character to find
+ * \return An array of integers representing the distance
+ */
 std::vector<int> StringUtilities::shortestToChar(std::string S, char C) {
   std::vector<int> ret(S.length(), INT_MAX);
 
@@ -213,7 +228,7 @@ StringUtilities::groupAnagrams(std::vector<std::string> &strings) {
       if (!nonMatch) {
         // insert the currWord in the found anagram set
         auto found = sets.find(anagramItr.first);
-        int set = 0;
+        int set;
         if (found != sets.end()) {
           set = found->second;
         } else {
@@ -239,10 +254,10 @@ StringUtilities::groupAnagrams(std::vector<std::string> &strings) {
 }
 
 /**
- * \brief Parse a CSV formatted file containing JobID, Runtime (sec), Next Job ID
- * and print out the chains of linked jobs to stdout
- * \param fileName dataset file in the CSV format detailed above
- * \return True or False depending on if the CSV file contains a valid format
+ * \brief Parse a CSV formatted file containing JobID, Runtime (sec), Next Job
+ * ID and print out the chains of linked jobs to stdout \param fileName dataset
+ * file in the CSV format detailed above \return True or False depending on if
+ * the CSV file contains a valid format
  */
 bool StringUtilities::parseCSV(const std::string &fileName) {
 
