@@ -43,7 +43,7 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 # Turn on default warnings for GNU compilers.
-if(CMAKE_COMPILER_IS_GNUCC OR CMAKE_COMPILER_IS_GNUCXX)
+if (CMAKE_COMPILER_IS_GNUCC OR CMAKE_COMPILER_IS_GNUCXX)
     # Update if necessary
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wpedantic")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wno-sign-compare")
@@ -55,35 +55,36 @@ if(CMAKE_COMPILER_IS_GNUCC OR CMAKE_COMPILER_IS_GNUCXX)
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wshadow")
     endif (CMAKE_CXX_COMPILER_VERSION VERSION_GREATER 4.9)
     #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wfloat-conversion")
-endif()
+endif ()
 
 # set up RPATH
 set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
 set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 
 # Finding libraries ############################################################
-if(NOT ENABLE_MPI)
-    add_definitions( -DDUMMY_MPI )
-else()
+if (NOT ENABLE_MPI)
+    add_definitions(-DDUMMY_MPI)
+else ()
     find_package(MPI REQUIRED)
     if (MPI_MPICXX_FOUND)
         set(HAVE_MPI true)
     endif (MPI_MPICXX_FOUND)
     include_directories(${MPI_INCLUDE_PATH})
-    if(MPI_LIBRARY)
+    if (MPI_LIBRARY)
         set(MPI_LIBRARIES ${MPI_LIBRARY})
-    endif(MPI_LIBRARY)
-    if(MPI_EXTRA_LIBRARY)
+    endif (MPI_LIBRARY)
+    if (MPI_EXTRA_LIBRARY)
         set(MPI_LIBRARIES ${MPI_LIBRARIES} "${MPI_EXTRA_LIBRARY}")
-    endif(MPI_EXTRA_LIBRARY)
+    endif (MPI_EXTRA_LIBRARY)
     # Needed for mpich 2
-    add_definitions( -DMPICH_IGNORE_CXX_SEEK )
-endif()
+    add_definitions(-DMPICH_IGNORE_CXX_SEEK)
+endif ()
 
-if(ENABLE_TESTS)
+if (ENABLE_TESTS)
     enable_testing()
+    add_subdirectory(extern/googletest)
     add_subdirectory(test)
-endif(ENABLE_TESTS)
+endif ()
 
 # Export CPPEXERCISES as a CMake package
 # install(FILES CPPEXERCISESConfig.cmake
@@ -158,12 +159,12 @@ set(CPACK_PACKAGE_CONTACT "${CPPEXERCISES_AUTHOR_EMAIL}")
 #set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_SOURCE_DIR}/LICENSE")
 #set(CPACK_RESOURCE_FILE_README "${CMAKE_SOURCE_DIR}/README.md")
 
-if(WIN32)
+if (WIN32)
     set(CPACK_GENERATOR NSIS)
-else()
-    if(CMAKE_VERSION VERSION_LESS 3.10)
+else ()
+    if (CMAKE_VERSION VERSION_LESS 3.10)
         message(WARNING "CMake 3.10 or above is required to build a DEB package.")
-    else()
+    else ()
         set(CPACK_GENERATOR DEB)
         #set(CPACK_DEBIAN_PACKAGE_NAME "")
         #set(CPACK_DEBIAN_PACKAGE_VERSION "")
@@ -195,8 +196,8 @@ else()
         #set(CPACK_DEBIAN_PACKAGE_GENERATE_SHLIBS_POLICY "=")  # CMake 3.6
         #set(CPACK_DEBIAN_ARCHIVE_TYPE "gnutar")  # CMake 3.7
         #set(CPACK_DEBIAN_PACKAGE_EPOCH "")  # Cmake 3.10
-    endif()
-endif()
+    endif ()
+endif ()
 # Lists exe and text label used for Start Menu shortcuts
 #set(CPACK_PACKAGE_EXECUTABLES "")
 # Must have matching Start Menu shortcut to create a Desktop link

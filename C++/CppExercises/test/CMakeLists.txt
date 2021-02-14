@@ -10,39 +10,43 @@ target_include_directories(catch
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/catch/>)
 set_target_properties(catch PROPERTIES LINKER_LANGUAGE CXX)
 
-add_executable(runStringUtilTests stringUtilTests.cpp)
-target_link_libraries(runStringUtilTests PUBLIC catch stringUtil)
+add_executable(runStringUtilTests ${CMAKE_CURRENT_SOURCE_DIR}/src/stringUtilTests.cpp)
+target_link_libraries(runStringUtilTests PUBLIC gtest gmock stringUtil)
 target_include_directories(runStringUtilTests
         PUBLIC
-        $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include/>)
+        "$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>")
 
-add_executable(runMathUtilTests ${CMAKE_CURRENT_SOURCE_DIR}/mathUtilTests.cpp)
-target_link_libraries(runMathUtilTests PUBLIC catch mathUtil)
+add_executable(runMathUtilTests ${CMAKE_CURRENT_SOURCE_DIR}/src/mathUtilTests.cpp)
+target_link_libraries(runMathUtilTests PUBLIC gtest gmock mathUtil)
 target_include_directories(runMathUtilTests
         PUBLIC
-        $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include/>)
+        "$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>")
 
-add_executable(runArrayUtilTests ${CMAKE_CURRENT_SOURCE_DIR}/arrayUtilTests.cpp)
-target_link_libraries(runArrayUtilTests PUBLIC catch arrayUtil)
+add_executable(runArrayUtilTests ${CMAKE_CURRENT_SOURCE_DIR}/src/arrayUtilTests.cpp)
+target_link_libraries(runArrayUtilTests PUBLIC gtest gmock arrayUtil)
 target_include_directories(runArrayUtilTests
         PUBLIC
-        $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include/>)
+        "$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>")
 
-add_executable(runListNodeUtilTests ${CMAKE_CURRENT_SOURCE_DIR}/listUtilTests.cpp)
-target_link_libraries(runListNodeUtilTests PUBLIC catch listUtil)
+add_executable(runListNodeUtilTests ${CMAKE_CURRENT_SOURCE_DIR}/src/listUtilTests.cpp)
+target_link_libraries(runListNodeUtilTests PUBLIC gtest gmock listUtil)
 target_include_directories(runListNodeUtilTests
         PUBLIC
-        $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include/>)
+        "$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>")
 
 add_test(NAME stringUtilTests
         COMMAND ${PROJECT_BINARY_DIR}/bin/runStringUtilTests -t ${TEST_DATA_DIR}
-        WORKING_DIRECTORY ${PROJECT_BINARY_DIR}/)
+        WORKING_DIRECTORY ${PROJECT_BINARY_DIR}
+        )
 add_test(NAME mathUtilTests
         COMMAND ${PROJECT_BINARY_DIR}/bin/runMathUtilTests
-        WORKING_DIRECTORY ${PROJECT_BINARY_DIR}/)
+        WORKING_DIRECTORY ${PROJECT_BINARY_DIR}
+        )
 add_test(NAME arrayUtilTests
         COMMAND ${PROJECT_BINARY_DIR}/bin/runArrayUtilTests
-        WORKING_DIRECTORY ${PROJECT_BINARY_DIR}/)
+        WORKING_DIRECTORY ${PROJECT_BINARY_DIR}
+        )
 add_test(NAME listNodeUtilTests
         COMMAND ${PROJECT_BINARY_DIR}/bin/runListNodeUtilTests
-        WORKING_DIRECTORY ${PROJECT_BINARY_DIR}/)
+        WORKING_DIRECTORY ${PROJECT_BINARY_DIR}
+        )
