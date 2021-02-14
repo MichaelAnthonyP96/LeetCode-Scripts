@@ -239,9 +239,10 @@ StringUtilities::groupAnagrams(std::vector<std::string> &strings) {
 }
 
 /**
- * \brief
- * \param fileName
- * \return
+ * \brief Parse a CSV formatted file containing JobID, Runtime (sec), Next Job ID
+ * and print out the chains of linked jobs to stdout
+ * \param fileName dataset file in the CSV format detailed above
+ * \return True or False depending on if the CSV file contains a valid format
  */
 bool StringUtilities::parseCSV(const std::string &fileName) {
 
@@ -249,13 +250,13 @@ bool StringUtilities::parseCSV(const std::string &fileName) {
   std::vector<std::vector<int>> db;
 
   // open the file string stream
-  std::istringstream()
+  std::ifstream file(fileName);
 
   // throw away the first line
   std::string tmp;
-  std::getline(std::cin, tmp);
+  std::getline(file, tmp);
   // build up database using input from stdin
-  while (std::getline(std::cin, tmp)) {
+  while (std::getline(file, tmp)) {
     int jobID = 0, runtime = 0, nextJobID = 0;
     std::istringstream is(tmp);
     char throwAway; // discard the ',' character
@@ -316,7 +317,7 @@ bool StringUtilities::parseCSV(const std::string &fileName) {
   // into chains
   std::sort(db.begin(), db.end(),
             [](const std::vector<int> &r, const std::vector<int> &l) {
-              return r[1] > l[1];
+              return r[1] < l[1];
             });
 
   // print out info to stdout stream, assuming the input "time" is in seconds
@@ -350,4 +351,5 @@ bool StringUtilities::parseCSV(const std::string &fileName) {
               << ":" << std::setfill('0') << std::setw(2) << seconds << "\n-"
               << std::endl;
   }
+  return true;
 }
