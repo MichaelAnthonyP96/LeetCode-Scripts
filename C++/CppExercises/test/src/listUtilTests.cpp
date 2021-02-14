@@ -8,9 +8,10 @@
 
 #include "ListNode.hpp"
 #include "ListNodeUtilities.hpp"
-#include "catch.hpp"
+#include "gmock/gmock.h"
+#include "gtest/gtest.h"
 
-TEST_CASE("sortList", "") {
+TEST(sortList, AscendingOrder) {
   ListNode l1(1);
   ListNode l2(2);
   ListNode l3(3);
@@ -20,15 +21,14 @@ TEST_CASE("sortList", "") {
   l2.next = &l1;
   l1.next = &l3;
 
-  ListNode* result = ListNodeUtilities::insertionSort(&l4);
-  REQUIRE(result->val == 1);
+  ListNode *result = ListNodeUtilities::insertionSort(&l4);
+  EXPECT_EQ(result->val, 1);
   result = result->next;
-  REQUIRE(result->val == 2);
+  EXPECT_EQ(result->val, 2);
   result = result->next;
-  REQUIRE(result->val == 3);
+  EXPECT_EQ(result->val, 3);
   result = result->next;
-  REQUIRE(result->val == 4);
+  EXPECT_EQ(result->val, 4);
   result = result->next;
-  REQUIRE(result == nullptr);
-
+  EXPECT_EQ(result, nullptr);
 }
