@@ -1,3 +1,11 @@
+//
+//  stringUtilTests.cpp
+//  CppExercises
+//
+//  Created by Michael Anthony Pope on 8/14/19.
+//  Copyright © 2019 Michael Anthony Pope. All rights reserved.
+//
+
 #include "StringUtilities.hpp"
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"

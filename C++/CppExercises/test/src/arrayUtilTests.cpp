@@ -1,3 +1,11 @@
+//
+//  arrayUtilTests.cpp
+//  CppExercises
+//
+//  Created by Michael Anthony Pope on 8/14/19.
+//  Copyright © 2019 Michael Anthony Pope. All rights reserved.
+//
+
 #include "ArrayUtilities.h"
 #include "catch.hpp"
 
