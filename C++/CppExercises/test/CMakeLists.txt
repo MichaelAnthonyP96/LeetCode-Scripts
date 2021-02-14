@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.1)
 
-set ( TEST_ENV_PATH_OPTIONS "PATH=${CMAKE_CURRENT_BINARY_DIR}/../bin:$ENV{PATH}")
+set(TEST_ENV_PATH_OPTIONS "PATH=${CMAKE_CURRENT_BINARY_DIR}/../bin:$ENV{PATH}")
+set(TEST_DATA_DIR "${CMAKE_CURRENT_SOURCE_DIR}/data")
 
 # Catch testing framework library
 add_library(catch ${CMAKE_CURRENT_SOURCE_DIR}/catch/catchmain.cpp)
@@ -34,7 +35,7 @@ target_include_directories(runListNodeUtilTests
         $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include/>)
 
 add_test(NAME stringUtilTests
-        COMMAND ${PROJECT_BINARY_DIR}/bin/runStringUtilTests
+        COMMAND ${PROJECT_BINARY_DIR}/bin/runStringUtilTests -t ${TEST_DATA_DIR}
         WORKING_DIRECTORY ${PROJECT_BINARY_DIR}/)
 add_test(NAME mathUtilTests
         COMMAND ${PROJECT_BINARY_DIR}/bin/runMathUtilTests

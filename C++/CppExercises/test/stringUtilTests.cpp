@@ -169,6 +169,13 @@ TEST_CASE("groupAnagram", "") {
   REQUIRE(result3 == answer3);
 }
 
-//TEST_CASE("parseCSV", "printJobStats") {
-//  StringUtilities::parseCSV("dataset.txt");
+TEST_CASE("parseCSV", "printJobStats") {
+
+  StringUtilities::parseCSV("dataset.txt");
+}
+
+//int main(int argc, char * argv[])
+//{
+//  ::testing::InitGoogleTest(&argc, argv);
+//  return RUN_ALL_TESTS();
 //}

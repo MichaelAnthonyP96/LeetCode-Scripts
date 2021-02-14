@@ -115,7 +115,7 @@ ArrayUtilities::transpose(std::vector<std::vector<int>> &A) {
 
 // O(n) runtime maxSub Array Algorithm
 // O(1) space required
-// Considered an "online" algorithm b/c it requres constant space,
+// Considered an "online" algorithm b/c it requires constant space,
 // runs in linear time and can return the solution at any time with
 // only the data that it currently has
 

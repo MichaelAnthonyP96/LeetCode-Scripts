@@ -17,11 +17,11 @@
 // TODO(mapope): add doxygen to all stringUtil methods
 // Given a valid (IPv4) IP address, return a defanged version of that IP
 // address. A defanged IP address replaces every period "." with "[.]".
-string StringUtilities::defangIPaddr(string address) {
+std::string StringUtilities::defangIPaddress(std::string address) {
   size_t f = 0;
-  int place = 0;
+  size_t place = 0;
   do {
-    f = address.substr(place, address.length() - place).find(".");
+    f = address.substr(place, address.length() - place).find('.');
     if (f != std::string::npos) {
       address.insert(f + place, "[");
       address.insert(f + place + 2, "]");
@@ -38,7 +38,7 @@ string StringUtilities::defangIPaddr(string address) {
 // The letters in J are guaranteed distinct, and all characters in J and S are
 // letters. Letters are case sensitive, so "a" is considered a different type of
 // stone from "A".
-int StringUtilities::numJewelsInStones(string J, string S) {
+int StringUtilities::numJewelsInStones(std::string J, std::string S) {
   std::string::iterator it = S.begin();
   int ret = 0;
   while (it != S.end()) {
@@ -52,7 +52,7 @@ int StringUtilities::numJewelsInStones(string J, string S) {
 
 // Implement function ToLowerCase() that has a string parameter str, and returns
 // the same string in lowercase.
-string StringUtilities::toLowerCase(string str) {
+std::string StringUtilities::toLowerCase(std::string str) {
   std::string s;
   for (int i = 0; i < str.length(); ++i) {
     s.insert(s.end(), std::tolower(str[i]));
@@ -113,9 +113,9 @@ std::vector<int> StringUtilities::shortestToChar(std::string S, char C) {
  * \param s String to examine
  * \return true or false whether a valid substring exists
  */
-bool StringUtilities::repeatedSubstringPattern(string s) {
-  int subLength = 1;
-  string substr, compare;
+bool StringUtilities::repeatedSubstringPattern(const std::string &s) {
+  unsigned long subLength = 1;
+  std::string substr, compare;
   while (subLength <= s.length()) {
     // if the substring is not an integer multiple of the original length,
     // then it is not a valid length
@@ -129,8 +129,8 @@ bool StringUtilities::repeatedSubstringPattern(string s) {
     }
     substr = s.substr(0, subLength);
     compare = s.substr(subLength, s.length() - subLength);
-    if (compare.find(substr) != string::npos) {
-      int multiplier = s.length() / subLength;
+    if (compare.find(substr) != std::string::npos) {
+      auto multiplier = s.length() / subLength;
       compare = substr;
       for (int i = 1; i < multiplier; ++i) {
         compare += substr;
@@ -248,6 +248,9 @@ bool StringUtilities::parseCSV(const std::string &fileName) {
   // database to store data-in
   std::vector<std::vector<int>> db;
 
+  // open the file string stream
+  std::istringstream()
+
   // throw away the first line
   std::string tmp;
   std::getline(std::cin, tmp);
@@ -311,7 +314,10 @@ bool StringUtilities::parseCSV(const std::string &fileName) {
 
   // Sort the DB based on total runtime after all jobs have been consolidated
   // into chains
-  // std::sort(db.begin(), db.end(), mySort);
+  std::sort(db.begin(), db.end(),
+            [](const std::vector<int> &r, const std::vector<int> &l) {
+              return r[1] > l[1];
+            });
 
   // print out info to stdout stream, assuming the input "time" is in seconds
   std::cout << "-" << std::endl;
