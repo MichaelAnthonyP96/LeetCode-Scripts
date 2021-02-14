@@ -1,14 +1,17 @@
 #include "StringUtilities.hpp"
-#include "catch.hpp"
+#include "gmock/gmock.h"
+#include "gtest/gtest.h"
 
-TEST_CASE("SchedulerTests", "DisjointActions") {
+static std::string TEST_DATA_DIR;
+
+TEST(SchedulerTests, DisjointActions) {
   std::vector<int> expected = {3, 2, 1, 0, 1, 0, 0, 1, 2, 2, 1, 0};
-  REQUIRE(StringUtilities::shortestToChar("loveleetcode", 'e') == expected);
+  EXPECT_TRUE(StringUtilities::shortestToChar("loveleetcode", 'e') == expected);
 }
 
-TEST_CASE("Substring", "repeatedSubstring") {
+TEST(Substring, repeatedSubstring) {
   std::string s = "abaaba";
-  REQUIRE(StringUtilities::repeatedSubstringPattern(s) == true);
+  EXPECT_TRUE(StringUtilities::repeatedSubstringPattern(s) == true);
 
   s = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
       "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
@@ -140,42 +143,72 @@ TEST_CASE("Substring", "repeatedSubstring") {
       "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
       "bbbbbbbbbbbbbbbbbbbbbbbb";
 
-  REQUIRE(StringUtilities::repeatedSubstringPattern(s) == false);
+  EXPECT_TRUE(StringUtilities::repeatedSubstringPattern(s) == false);
 
   s = "aaa";
-  REQUIRE(StringUtilities::repeatedSubstringPattern(s) == true);
+  EXPECT_TRUE(StringUtilities::repeatedSubstringPattern(s) == true);
 }
 
-TEST_CASE("groupAnagram", "") {
+TEST(groupAnagram, makeGroups) {
   std::vector<std::string> input = {"eat", "tea", "tan", "ate", "nat", "bat"};
   std::vector<std::vector<std::string>> result =
       StringUtilities::groupAnagrams(input);
   std::vector<std::vector<std::string>> answer = {
       {"eat", "tea", "ate"}, {"tan", "nat"}, {"bat"}};
-  REQUIRE(result == answer);
+  EXPECT_TRUE(result == answer);
 
   std::vector<std::string> input2 = {"tea", "", "eat", "", "tea", ""};
   std::vector<std::vector<std::string>> result2 =
       StringUtilities::groupAnagrams(input2);
   std::vector<std::vector<std::string>> answer2 = {{"tea", "eat", "tea"},
                                                    {"", "", ""}};
-  REQUIRE(result2 == answer2);
+  EXPECT_TRUE(result2 == answer2);
 
   std::vector<std::string> input3 = {"tea", "and", "ace", "ad", "eat", "dans"};
   std::vector<std::vector<std::string>> result3 =
       StringUtilities::groupAnagrams(input3);
   std::vector<std::vector<std::string>> answer3 = {
       {"tea", "eat"}, {"and"}, {"ace"}, {"ad"}, {"dans"}};
-  REQUIRE(result3 == answer3);
+  EXPECT_TRUE(result3 == answer3);
 }
 
-TEST_CASE("parseCSV", "printJobStats") {
-
-  StringUtilities::parseCSV("dataset.txt");
+TEST(parseCSV, printJobStats) {
+  std::string fileName = TEST_DATA_DIR + "/dataset.txt";
+  std::string expected = "-\n"
+                         "start_job: 2\n"
+                         "last_job: 3\n"
+                         "number_of_jobs: 2\n"
+                         "job_chain_runtime: 00:00:35\n"
+                         "average_job_time: 00:00:17\n"
+                         "-\n"
+                         "start_job: 1\n"
+                         "last_job: 23\n"
+                         "number_of_jobs: 2\n"
+                         "job_chain_runtime: 00:01:30\n"
+                         "average_job_time: 00:00:45\n"
+                         "-"
+                         "\n";
+  testing::internal::CaptureStdout();
+  StringUtilities::parseCSV(fileName);
+  EXPECT_EQ(testing::internal::GetCapturedStdout(), expected);
 }
 
-//int main(int argc, char * argv[])
-//{
-//  ::testing::InitGoogleTest(&argc, argv);
-//  return RUN_ALL_TESTS();
-//}
+int main(int argc, char *argv[]) {
+  // parse the command-line options
+  for (int i = 0; i < argc; ++i) {
+    char *token = std::strtok(argv[i], " ");
+    if (std::strcmp(token, "-t") == 0) {
+      // check that there is a path supplied after the -t flag
+      if ((i + 1) >= argc) {
+        std::cout << "Please provide a test data directory using the -t flag"
+                  << std::endl;
+        exit(1);
+      }
+      TEST_DATA_DIR = argv[i + 1];
+      break;
+    }
+  }
+
+  ::testing::InitGoogleTest(&argc, argv);
+  return RUN_ALL_TESTS();
+}
