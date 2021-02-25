@@ -9,19 +9,22 @@
 #ifndef ListNodeUtilities_hpp
 #define ListNodeUtilities_hpp
 
-#include <stdio.h>
+#include <cstdio>
+
 #include "ListNode.hpp"
 
-class ListNodeUtilities{
-public:
-    static ListNode* deleteDuplicates(ListNode* head);
-    static ListNode* addTwoNumbers(ListNode* l1, ListNode* l2);
-    static int linkedListToInteger(ListNode* l);
-    static ListNode* integerToLinkedList(int num);
-    static ListNode* middleNode(ListNode* head);
-    static ListNode* reverseList(ListNode* head);
-    static void deleteNode(ListNode* node);
-    static ListNode* insertionSort(ListNode* head);
+template <typename T>
+class ListNodeUtilities {
+   public:
+    ListNode<T>* deleteDuplicates(ListNode<T>* head);
+    ListNode<T>* addTwoNumbers(ListNode<T>* l1, ListNode<T>* l2);
+    T linkedListToInteger(ListNode<T>* l);
+    ListNode<T>* integerToLinkedList(T num);
+    ListNode<T>* middleNode(ListNode<T>* head);
+    ListNode<T>* reverseList(ListNode<T>* head);
+    void deleteNode(ListNode<T>* node);
+    ListNode<T>* insertionSort(ListNode<T>* head);
 };
-    
+
+#include "ListNodeUtilities.hpp"
 #endif /* ListNodeUtilities_hpp */

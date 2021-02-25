@@ -9,13 +9,16 @@
 #ifndef ListNode_hpp
 #define ListNode_hpp
 
+template <typename T>
 class ListNode {
-public:
-    ListNode(int x); //constructor
-    ListNode(int x, ListNode* next); // constructor
-    virtual ~ListNode(); //destructor
-    ListNode* next; //ListNode pointer next
-    int val; //Value
+   public:
+    explicit ListNode(T x);         // constructor
+    ListNode(T x, ListNode *next);  // constructor
+    virtual ~ListNode();            // destructor
+   private:
+    ListNode *next;  // ListNode pointer next
+    T val;           // Value
 };
 
-#endif /* ListNode_h */
+#include "ListNode.cpp"
+#endif // ListNode_hpp

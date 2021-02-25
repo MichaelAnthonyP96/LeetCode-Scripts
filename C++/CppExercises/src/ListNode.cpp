@@ -6,16 +6,18 @@
 //  Copyright © 2019 Michael Anthony Pope. All rights reserved.
 //
 
-#include <stdlib.h>
-#include "ListNode.hpp"
+#include <cstdlib>
 
-ListNode::ListNode(const int x) : val(x), next(NULL) {}
+template <typename T>
+ListNode::ListNode(T x) : val(x), next(nullptr) {}
 
-ListNode::ListNode(const int x, ListNode* next) : val(x), next(next) {}
+template <typename T>
+ListNode::ListNode(T x, ListNode* next) : val(x), next(next) {}
 
+template <typename T>
 ListNode::~ListNode() {
-    next = NULL;
     delete next;
+    next = nullptr;
 }
 
 
