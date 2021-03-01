@@ -163,11 +163,12 @@ using namespace std;
 //    return 0;
 //}
 
-#include "ListNode.hpp"
-#include "ListNodeUtilities.hpp"
-#include "ArrayUtilities.h"
-#include "StringUtilities.hpp"
 #include <iostream>
+
+#include "ArrayUtilities.h"
+#include "ListNodeUtilities.hpp"
+#include "SinglyLinkedListNode.hpp"
+#include "StringUtilities.hpp"
 
 int main(){
 //    ListNode* l5 = new ListNode(5,NULL);

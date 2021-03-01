@@ -82,6 +82,7 @@ endif ()
 
 if (ENABLE_TESTS)
     enable_testing()
+    include(GoogleTest)
     add_subdirectory(extern/googletest)
     add_subdirectory(test)
 endif ()
@@ -111,17 +112,7 @@ target_include_directories(mathUtil
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
         $<INSTALL_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>)
 
-add_library(listUtil SHARED
-        ${CMAKE_CURRENT_SOURCE_DIR}/include/ListNodeUtilities.hpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/include/ListNode.hpp
-        )
-target_include_directories(listUtil
-        PUBLIC
-        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>
-        $<INSTALL_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-        )
-set_target_properties(listUtil PROPERTIES LINKER_LANGUAGE CXX)
+add_subdirectory(LinkedList)
 
 add_executable(main ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp)
 target_link_libraries(main PUBLIC arrayUtil stringUtil mathUtil)
