@@ -7,7 +7,6 @@
 //
 
 #include "ArrayUtilities.h"
-#include "gmock/gmock.h"
 #include "gtest/gtest.h"
 
 TEST(profitTests, Max) {
@@ -22,6 +21,17 @@ TEST(profitTests, Max) {
 
   std::vector<int> prices4 = {2, 1, 4, 5, 2, 9, 7};
   EXPECT_EQ(ArrayUtilities::maxProfit(prices4), 11);
+}
+
+TEST(mergeSort, Duplicates) {
+  std::vector<int> nums = {5, 1, 1, 2, 0, 0};
+  std::vector<int> result = ArrayUtilities::sortArray(nums);
+  EXPECT_EQ(result[0], 0);
+  EXPECT_EQ(result[1], 0);
+  EXPECT_EQ(result[2], 1);
+  EXPECT_EQ(result[3], 1);
+  EXPECT_EQ(result[4], 2);
+  EXPECT_EQ(result[5], 5);
 }
 
 TEST(mergeSort, Ascending) {
@@ -52,13 +62,18 @@ TEST(ArthimeticProgress, Sequence) {
   EXPECT_TRUE(ArrayUtilities::canMakeArithmeticProgression(nums2));
 }
 
-//TEST_CASE("mergeSort", "") {
-//  std::vector<int> nums = {5, 1, 1, 2, 0, 0};
-//  std::vector<int> result = ArrayUtilities::sortArray(nums);
-//  EXPECT_EQ(result[0], 0);
-//  EXPECT_EQ(result[1], 0);
-//  EXPECT_EQ(result[2], 1);
-//  EXPECT_EQ(result[3], 1);
-//  EXPECT_EQ(result[4], 2);
-//  EXPECT_EQ(result[5], 5);
-//}
+TEST(SortByParity, Two) {
+  std::vector<int> nums = {4, 2, 5, 7};
+  std::vector<int> ans = {4, 5, 2, 7};
+  EXPECT_EQ(ans, ArrayUtilities::sortArrayByParityII(nums));
+
+    nums = {648,831,560,986,192,424,997,829,897,843};
+    ans = {648,831,560,997,192,897,986,829,424,843};
+    EXPECT_EQ(ans, ArrayUtilities::sortArrayByParityII(nums));
+}
+
+int main(int argc, char** argv)
+{
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}

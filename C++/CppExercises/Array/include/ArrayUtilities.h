@@ -6,8 +6,7 @@
 //  Copyright © 2019 Michael Anthony Pope. All rights reserved.
 //
 
-#ifndef ArrayUtilities_h
-#define ArrayUtilities_h
+#pragma once
 
 #include <cstdio>
 #include <vector>
@@ -25,6 +24,5 @@ public:
     static std::vector<int> mergeTwoSortedArrays(std::vector<int> l1, std::vector<int> l2);
     static std::vector<int> mergeSortAscending(std::vector<int>& nums);
     static bool canMakeArithmeticProgression(std::vector<int>& arr);
+    static std::vector<int> sortArrayByParityII(std::vector<int>& nums);
 };
-
-#endif /* ArrayUtilities_hpp */

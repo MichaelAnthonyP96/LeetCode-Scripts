@@ -22,12 +22,6 @@ target_include_directories(runMathUtilTests
         PUBLIC
         "$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>")
 
-add_executable(runArrayUtilTests ${CMAKE_CURRENT_SOURCE_DIR}/src/arrayUtilTests.cpp)
-target_link_libraries(runArrayUtilTests PUBLIC gtest gmock arrayUtil)
-target_include_directories(runArrayUtilTests
-        PUBLIC
-        "$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>")
-
 add_test(NAME stringUtilTests
         COMMAND ${PROJECT_BINARY_DIR}/bin/runStringUtilTests -t ${TEST_DATA_DIR}
         WORKING_DIRECTORY ${PROJECT_BINARY_DIR}
