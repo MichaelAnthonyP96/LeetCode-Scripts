@@ -1,3 +1,7 @@
+include_guard()
+
+cmake_minimum_required(VERSION 3.9)
+
 ############################################# SOURCE/HEADER DETERMINATION ##############################################
 set(LIST_TEST_HEADERS
         )

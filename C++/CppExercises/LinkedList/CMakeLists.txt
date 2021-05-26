@@ -1,3 +1,7 @@
+include_guard()
+
+cmake_minimum_required(VERSION 3.9)
+
 ############################################# SOURCE/HEADER DETERMINATION ##############################################
 set(LIST_HEADERS
         ${CMAKE_CURRENT_SOURCE_DIR}/include/ListADT.hpp
