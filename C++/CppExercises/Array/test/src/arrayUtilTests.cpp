@@ -72,6 +72,14 @@ TEST(SortByParity, Two) {
     EXPECT_EQ(ans, ArrayUtilities::sortArrayByParityII(nums));
 }
 
+TEST(countNegatives, fourByFour)
+{
+    std::vector<std::vector<int>> grid {
+        {4, 3, 2, -1}, {3, 2, 1, -1}, {1, 1, -1, -2}, {-1, -1, -2, -3}};
+
+    EXPECT_EQ(ArrayUtilities::countNegatives(grid), 8);
+}
+
 int main(int argc, char** argv)
 {
     ::testing::InitGoogleTest(&argc, argv);

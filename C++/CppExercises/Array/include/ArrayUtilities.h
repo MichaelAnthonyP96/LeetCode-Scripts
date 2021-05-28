@@ -25,4 +25,5 @@ public:
     static std::vector<int> mergeSortAscending(std::vector<int>& nums);
     static bool canMakeArithmeticProgression(std::vector<int>& arr);
     static std::vector<int> sortArrayByParityII(std::vector<int>& nums);
+    static int countNegatives(std::vector<std::vector<int>>& nums);
 };

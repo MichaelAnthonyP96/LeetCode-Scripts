@@ -375,3 +375,36 @@ std::vector<int> ArrayUtilities::sortArrayByParityII(std::vector<int>& nums)
     }
     return nums;
 }
+
+/**
+ * \brief Given a m x n matrix grid which is sorted in non-increasing order both row-wise and
+ * column-wise, return the number of negative numbers in grid. Leetcode Problem 1351
+ * \param grid input (mxn) vector of integers
+ * \note O(m + n) time complexity
+ * \return The number of negative numbers in the matrix
+ */
+int ArrayUtilities::countNegatives(std::vector<std::vector<int>>& grid)
+{
+    // since the matrix is sorted in both directions, we start at the bottom left and move up
+    int rowSize    = grid.size();
+    int columnSize = grid[0].size();
+    int i          = rowSize - 1;
+    int j          = 0;
+    int count      = 0;
+    while (i >= 0 && j < columnSize)
+    {
+        if (grid[i][j] < 0)
+        {
+            // we know the rest of the items in the row are negative
+            count += (columnSize - j);
+            // move up a row
+            i--;
+        }
+        else
+        {
+            // move one column to the right
+            j++;
+        }
+    }
+    return count;
+}
