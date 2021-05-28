@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.9)
 
 # set project metadata #########################################################
 
-set(CPPEXERCISES_MAJOR_VERSION 2)
+set(CPPEXERCISES_MAJOR_VERSION 1)
 set(CPPEXERCISES_MINOR_VERSION 1)
 set(CPPEXERCISES_PATCH_VERSION 0)
 set(CPPEXERCISES_EXTRA_VERSION "" CACHE STRING "CPPEXERCISES extra version string")
@@ -10,7 +10,7 @@ set(CPPEXERCISES_VERSION "${CPPEXERCISES_MAJOR_VERSION}.${CPPEXERCISES_MINOR_VER
 set(CPPEXERCISES_VERSION
         "${CPPEXERCISES_VERSION}.${CPPEXERCISES_PATCH_VERSION}${CPPEXERCISES_EXTRA_VERSION}")
 set(CPPEXERCISES_SHORT_LICENSE "University of Illinois/NCSA Open Source License")
-set(CPPEXERCISES_HOMEPAGE_URL "http://git.illinois.rocstar/IR/CPPEXERCISES-NO-IRAD")
+set(CPPEXERCISES_HOMEPAGE_URL "https://github.com/MichaelAnthonyP96/LeetCode-Scripts/")
 set(CPPEXERCISES_AUTHOR "Michael Anthony Pope (lead)")
 set(CPPEXERCISES_AUTHOR_EMAIL "michaelpope96@gmail.com")
 set(CPPEXERCISES_DESCRIPTION "C++ practice exercises")
@@ -108,12 +108,7 @@ if(BUILD_DOCUMENTATION)
     #            DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/CPPEXERCISES)
 endif()
 
-# Export CPPEXERCISES as a CMake package
-# install(FILES CPPEXERCISESConfig.cmake
-#        DESTINATION lib/cmake/CPPEXERCISES)
-#install(EXPORT CPPEXERCISES
-#        NAMESPACE CPPEXERCISES::
-#        DESTINATION lib/cmake/CPPEXERCISES)
+
 
 add_library(stringUtil SHARED
         ${CMAKE_CURRENT_SOURCE_DIR}/src/StringUtilities.cpp
@@ -139,9 +134,15 @@ add_subdirectory(LinkedList)
 add_executable(main ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp)
 target_link_libraries(main PUBLIC arrayUtil stringUtil mathUtil)
 
+################################# INSTALLATION ################################
+# Export CPPEXERCISES as a CMake package
+# install(FILES CPPEXERCISESConfig.cmake
+#        DESTINATION lib/cmake/CPPEXERCISES)
+# install(EXPORT CPPEXERCISES
+#        NAMESPACE CPPEXERCISES::
+#        DESTINATION lib/cmake/CPPEXERCISES)
 
-
-# Packaging ####################################################################
+################################## PACKAGING ##################################
 set(CPACK_PACKAGE_NAME "CPPEXERCISES")
 set(CPACK_PACKAGE_VENDOR "${CPPEXERCISES_AUTHOR}")
 set(CPACK_PACKAGE_VERSION "${CPPEXERCISES_VERSION}")
