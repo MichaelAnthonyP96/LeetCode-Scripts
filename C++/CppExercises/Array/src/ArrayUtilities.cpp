@@ -315,7 +315,7 @@ bool ArrayUtilities::canMakeArithmeticProgression(std::vector<int>& arr)
  * \brief Given an array or ints, sort it by Parity
  * \details Given an array of integers nums, half of the integers in nums are odd, and the other
  * half are even. Sort the array so that whenever nums[i] is odd, i is odd, and whenever nums[i] is
- * even, i is even. Return any answer array that satisfies this condition.
+ * even, i is even. Return any answer array that satisfies this condition. LeetCode Problem 922
  * \note O(1) space, O(n) runtime
  * \param nums Input array to sort by Parity (odd or even)
  * \return Vector of ints sorted by Parity
