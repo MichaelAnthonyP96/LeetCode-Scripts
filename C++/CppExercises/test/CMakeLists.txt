@@ -10,12 +10,6 @@ target_include_directories(catch
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/catch/>)
 set_target_properties(catch PROPERTIES LINKER_LANGUAGE CXX)
 
-add_executable(runStringUtilTests ${CMAKE_CURRENT_SOURCE_DIR}/src/stringUtilTests.cpp)
-target_link_libraries(runStringUtilTests PUBLIC gtest gmock stringUtil)
-target_include_directories(runStringUtilTests
-        PUBLIC
-        "$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>")
-
 add_executable(runMathUtilTests ${CMAKE_CURRENT_SOURCE_DIR}/src/mathUtilTests.cpp)
 target_link_libraries(runMathUtilTests PUBLIC gtest gmock mathUtil)
 target_include_directories(runMathUtilTests
