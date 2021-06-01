@@ -23,4 +23,5 @@ public:
   static std::vector<std::vector<std::string>>
   groupAnagrams(std::vector<std::string> &strs);
   static bool parseCSV(const std::string &fileName);
+  static std::string truncateSentence(const std::string &s, int k);
 };

@@ -368,3 +368,30 @@ bool StringUtilities::parseCSV(const std::string &fileName) {
   }
   return true;
 }
+
+/**
+ * \brief A sentence is a list of words that are separated by a single space with no leading or
+ * trailing spaces. Each of the words consists of only uppercase and lowercase English letters
+ * (no punctuation). For example, "Hello World", "HELLO", and "hello world hello world" are all
+ * sentences. You are given a sentence s and an integer k. You want to truncate s such that it
+ * contains only the first k words. Return s after truncating it. LeetCode Problem 1816
+ * \param s string to truncate
+ * \param k number of words to remain in the sentence
+ * \note O(n) runtime, O(1) space
+ * \return string in truncated form
+ */
+std::string truncateSentence(std::string s, int k)
+{
+    // iterate through the string searching for successive ' ' characters
+    std::size_t pos = -1;
+    for (; k > 0; --k)
+    {
+        pos = s.find(' ', pos + 1);
+    }
+    // if the last found space is at a valid position, erase from that mark onward
+    if (std::string::npos != pos)
+    {
+        s.erase(pos);
+    }
+    return s;
+}

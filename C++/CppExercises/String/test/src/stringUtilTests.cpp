@@ -201,6 +201,17 @@ TEST(parseCSV, printJobStats) {
   EXPECT_EQ(testing::internal::GetCapturedStdout(), expected);
 }
 
+TEST(truncateSentence, printJobStats) {
+    std::string sentence = "chopper is not a tanuki";
+    std::string result = StringUtilities::truncateSentence(sentence, 5);
+    EXPECT_EQ(result, sentence);
+
+    sentence = "what is the solution to this problem";
+    std::string expected = "what is the solution";
+    result = StringUtilities::truncateSentence(sentence, 4);
+    EXPECT_EQ(result, expected);
+}
+
 int main(int argc, char *argv[]) {
   // parse the command-line options
   for (int i = 0; i < argc; ++i) {
