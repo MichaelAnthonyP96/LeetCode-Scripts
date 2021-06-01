@@ -20,10 +20,10 @@ if (MSVC OR XCODE)
     source_group(${LIST_TEST_HEADERS} "Header Files")
 endif ()
 ################################################### DECLARE BINARIES ###################################################
-add_executable(ListTests ${LIST_TEST_ALL_FILES})
+add_executable(listTests ${LIST_TEST_ALL_FILES})
 
 ################################################# INCLUDE DIRECTORIES ##################################################
-target_include_directories(ListTests
+target_include_directories(listTests
         PUBLIC
         "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
         )
@@ -31,17 +31,17 @@ target_include_directories(ListTests
 ################################################# COMPILE DEFINITIONS ##################################################
 
 ################################################### LINK LIBRARIES #####################################################
-target_link_libraries(ListTests PUBLIC
+target_link_libraries(listTests PUBLIC
         gtest
         gmock
         listUtil
         )
 
 ####################################################### TESTING ########################################################
-gtest_add_tests(TARGET ListTests
+gtest_add_tests(TARGET listTests
         SOURCES ${LIST_TEST_SOURCES}
         EXTRA_ARGS ""
-        WORKING_DIRECTORY $<TARGET_FILE_DIR:ListTests>
+        WORKING_DIRECTORY $<TARGET_FILE_DIR:listTests>
         TEST_PREFIX "List."
         TEST_LIST ALL_LIST_TESTS
         )
@@ -50,7 +50,7 @@ set_tests_properties(${ALL_LIST_TESTS} PROPERTIES
         ENVIRONMENT "PATH=$ENV{PATH};"
         )
 ################################################### CUSTOM COMMANDS ####################################################
-set_target_properties(ListTests
+set_target_properties(listTests
         PROPERTIES LINKER_LANGUAGE CXX
         )
 

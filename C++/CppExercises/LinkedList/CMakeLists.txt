@@ -22,7 +22,7 @@ if (MSVC OR XCODE)
     source_group(${LIST_HEADERS} "Header Files")
 endif ()
 ################################################### DECLARE BINARIES ###################################################
-add_library(listUtil SHARED ${LIST_HEADERS})
+add_library(listUtil SHARED ${LIST_SOURCES})
 
 ################################################# INCLUDE DIRECTORIES ##################################################
 target_include_directories(listUtil
