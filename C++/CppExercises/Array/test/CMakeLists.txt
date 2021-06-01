@@ -41,8 +41,8 @@ target_link_libraries(arrayTests PUBLIC
 gtest_add_tests(TARGET arrayTests
         SOURCES ${ARRAY_TEST_SOURCES}
         EXTRA_ARGS ""
-        WORKING_DIRECTORY $<TARGET_FILE_DIR:ListTests>
-        TEST_PREFIX "List."
+        WORKING_DIRECTORY $<TARGET_FILE_DIR:arrayTests>
+        TEST_PREFIX "Array."
         TEST_ARRAY ALL_ARRAY_TESTS
         )
 

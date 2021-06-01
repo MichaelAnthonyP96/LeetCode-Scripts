@@ -97,16 +97,6 @@ if (BUILD_DOCUMENTATION)
     add_subdirectory(docs)
 endif ()
 
-
-add_library(stringUtil SHARED
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/StringUtilities.cpp
-        )
-target_include_directories(stringUtil
-        PUBLIC
-        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-        $<INSTALL_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-        )
-
 add_library(mathUtil SHARED
         ${CMAKE_CURRENT_SOURCE_DIR}/src/MathUtilities.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/src/Predicates.cpp
@@ -118,6 +108,7 @@ target_include_directories(mathUtil
 
 add_subdirectory(Array)
 add_subdirectory(LinkedList)
+add_subdirectory(String)
 
 add_executable(main ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp)
 target_link_libraries(main PUBLIC arrayUtil stringUtil mathUtil)
@@ -191,7 +182,7 @@ endif ()
 #set(CPACK_CREATE_DESKTOP_LINKS "")
 
 # WIN32 NOTE: - Run CPack from a MSVC environment as dumpbin is required
-#               for the fixup_bundle search of DLL dependecies.
+#               for the fixup_bundle search of DLL dependencies.
 #             - The system libraries pulled in are release DLLs.
 #               Do NOT package in Debug! THAT APPLIES TO DEPENDENCIES TOO!!
 include(CPack)
