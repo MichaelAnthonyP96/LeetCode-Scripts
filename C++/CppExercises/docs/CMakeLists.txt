@@ -18,6 +18,10 @@ set(DOC_DIRS
         ${PROJECT_SOURCE_DIR}/Array/include
         ${PROJECT_SOURCE_DIR}/LinkedList/src
         ${PROJECT_SOURCE_DIR}/LinkedList/include
+        ${PROJECT_SOURCE_DIR}/String/src
+        ${PROJECT_SOURCE_DIR}/String/include
+        ${PROJECT_SOURCE_DIR}/src
+        ${PROJECT_SOURCE_DIR}/include
         )
 
 doxygen_add_docs(Docs
