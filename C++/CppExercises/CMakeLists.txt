@@ -88,26 +88,14 @@ if (ENABLE_TESTS)
     add_subdirectory(test)
 endif ()
 
-# Documentation
-if(BUILD_DOCUMENTATION)
+#################################################### DOCUMENTATION #####################################################
+if (BUILD_DOCUMENTATION)
     find_package(Doxygen REQUIRED)
     if (NOT DOXYGEN_FOUND)
         message(FATAL_ERROR "Doxygen is needed to build the documentation.")
-    endif()
-    #    set(doxyfile_in ${CMAKE_CURRENT_SOURCE_DIR}/doc/CPPEXERCISES.cfg.in)
-    #    set(doxyfile ${CMAKE_CURRENT_BINARY_DIR}/CPPEXERCISES.cfg)
-    #    set(documentation ${CMAKE_CURRENT_BINARY_DIR}/docs)
-    #    configure_file(${doxyfile_in} ${doxyfile} @ONLY)
-    #    add_custom_command(OUTPUT ${documentation}
-    #            COMMAND ${DOXYGEN_EXECUTABLE} ${doxyfile}
-    #            MAIN_DEPENDENCY ${doxyfile} ${doxyfile_in}
-    #            DEPENDS ${doxyfile} ${doxy_extra_files}
-    #            COMMENT "Generating documentation")
-    #    add_custom_target(docs ALL DEPENDS ${documentation})
-    #    install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/docs
-    #            DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/CPPEXERCISES)
-endif()
-
+    endif ()
+    add_subdirectory(docs)
+endif ()
 
 
 add_library(stringUtil SHARED
