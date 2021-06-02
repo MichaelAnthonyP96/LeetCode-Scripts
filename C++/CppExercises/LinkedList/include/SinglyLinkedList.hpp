@@ -105,8 +105,10 @@ class SinglyLinkedList : public ListADT<T>
     static ListNode* insertionSort(ListNode* head);
     static T sum(SinglyLinkedList<T>::ListIterator itr);
     static ListNode* getIntersectionNode(SinglyLinkedList<T>& lA, SinglyLinkedList<T>& lB);
+    static bool hasCycle(SinglyLinkedList<T>& l);
   private:
     static ListNode* getIntersectionNode(ListNode* headA, ListNode* headB);
+    static bool hasCycle(ListNode* head);
 };
 
 #include "SinglyLinkedList.cpp"

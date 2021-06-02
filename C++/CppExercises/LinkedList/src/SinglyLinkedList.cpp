@@ -10,6 +10,7 @@
 
 #include <cmath>
 #include <stack>
+#include <unordered_set>
 
 template<typename T>
 SinglyLinkedList<T>::ListNode::ListNode(const T& x) : val(x), next(nullptr)
@@ -813,3 +814,39 @@ void SinglyLinkedList<T>::append(const SinglyLinkedList<T>& otherList)
     this->m_pTail->next = otherList.m_pHead;
 }
 
+/**
+ * \brief Helper method to directly pass in a SinglyLinkedList obj when determining if a list has a
+ * cycle. LeetCode Problem 141
+ * \tparam T template parameter stored within each ListNode
+ * \param l List with which to determine if it has a cycle
+ * \note O(n) runtime, O(n) space
+ * \return True or False whether a cycle was detected
+ */
+template<typename T>
+bool SinglyLinkedList<T>::hasCycle(SinglyLinkedList<T>& l)
+{
+    return SinglyLinkedList<T>::hasCycle(l.m_pHead);
+}
+
+/**
+ * \brief Determine whether a list has a cycle. LeetCode Problem 141
+ * \tparam T template parameter stored within each ListNode
+ * \param head ListNode* pointing to where you should start searching for a cycle
+ * \note O(n) runtime, O(n) space
+ * \return True or False whether a cycle was detected
+ */
+template<typename T>
+bool SinglyLinkedList<T>::hasCycle(SinglyLinkedList::ListNode* head)
+{
+    std::unordered_set<SinglyLinkedList<T>::ListNode*> set;
+    while (head != nullptr)
+    {
+        set.insert(head);
+        head = head->next;
+        if (set.find(head) != set.end())
+        {
+            return true;
+        }
+    }
+    return false;
+}

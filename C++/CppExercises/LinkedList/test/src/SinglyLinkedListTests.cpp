@@ -175,6 +175,25 @@ TEST(getIntersectionNode, NoIntersection) {
     ASSERT_EQ(nullptr, result);
 }
 
+TEST(findCycle, noCycle) {
+    // 2 -> 6 -> 4
+    SinglyLinkedList<int>* listA = SinglyLinkedList<int>::integerToLinkedList(264);
+
+    ASSERT_FALSE(SinglyLinkedList<int>::hasCycle(*listA));
+}
+
+TEST(findCycle, cycleFound) {
+    // 2 -> 6 -> 4
+    SinglyLinkedList<int>* listA = SinglyLinkedList<int>::integerToLinkedList(264);
+
+    auto itr = listA->begin();
+    itr++;
+    itr++;
+    itr.getNode()->next = listA->begin().getNode();
+
+    ASSERT_TRUE(SinglyLinkedList<int>::hasCycle(*listA));
+}
+
 int main(int argc, char** argv)
 {
     ::testing::InitGoogleTest(&argc, argv);
