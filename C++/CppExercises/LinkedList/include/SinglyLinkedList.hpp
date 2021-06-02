@@ -42,8 +42,8 @@ class SinglyLinkedList : public ListADT<T>
     ~SinglyLinkedList();
 
     // Abstract Data Type function to fulfill
-    bool empty() const override;
-    int size() const override;
+    [[nodiscard]] bool empty() const override;
+    [[nodiscard]] int size() const override;
     void print(std::ostream& os) const override;
     void insertFront(const T& nData) override;
     void sort() override;
@@ -92,17 +92,21 @@ class SinglyLinkedList : public ListADT<T>
     SinglyLinkedList<T> split(ListNode* start, int splitPoint);
     SinglyLinkedList<T>::ListNode* merge(ListNode* first, ListNode* second);
     void mergeWith(SinglyLinkedList<T> const& otherList);
+    void append(SinglyLinkedList<T> const& otherList);
 
     // Utility methods to operate on the list
     void removeDuplicates();
     static SinglyLinkedList<T>* addTwoNumbers(SinglyLinkedList<T>& l1, SinglyLinkedList<T>& l2);
     T linkedListToInteger();
-    SinglyLinkedList<T>* integerToLinkedList(T num);
+    static SinglyLinkedList<T>* integerToLinkedList(T num);
     ListNode* middleNode();
     ListIterator find(T searchVal);
     void deleteNode(SinglyLinkedList<T>::ListIterator itr);
     static ListNode* insertionSort(ListNode* head);
     static T sum(SinglyLinkedList<T>::ListIterator itr);
+    static ListNode* getIntersectionNode(SinglyLinkedList<T>& lA, SinglyLinkedList<T>& lB);
+  private:
+    static ListNode* getIntersectionNode(ListNode* headA, ListNode* headB);
 };
 
 #include "SinglyLinkedList.cpp"

@@ -6,9 +6,8 @@
 //  Copyright © 2019 Michael Anthony Pope. All rights reserved.
 //
 
-// #include "SinglyLinkedList.hpp"
+#include "SinglyLinkedList.hpp"
 
-#include <SinglyLinkedList.hpp>
 #include <cmath>
 #include <stack>
 
@@ -60,7 +59,7 @@ bool SinglyLinkedList<T>::ListIterator::operator==(const SinglyLinkedList::ListI
     {
         return true;
     }
-    else if (p != nullptr && rhs.p == nullptr || p == nullptr && rhs.p != nullptr)
+    else if ((p != nullptr && rhs.p == nullptr) || (p == nullptr && rhs.p != nullptr))
     {
         return false;
     }
@@ -761,3 +760,56 @@ typename SinglyLinkedList<T>::ListIterator SinglyLinkedList<T>::find(T searchVal
     }
     return SinglyLinkedList<T>::ListIterator();
 }
+
+/**
+ * \brief Helper method to directly pass in a SinglyLinkedList obj when determining if two Lists
+ * intersect
+ * \tparam T template parameter stored within each ListNode
+ * \param lA List object A
+ * \param lB List object B
+ * \return The node at which the two lists intersect, if they do at all
+ */
+template<typename T>
+typename SinglyLinkedList<T>::ListNode* SinglyLinkedList<T>::getIntersectionNode(SinglyLinkedList<T>& lA,
+                                                                     SinglyLinkedList<T>& lB)
+{
+    return getIntersectionNode(lA.m_pHead, lB.m_pHead);
+}
+
+/**
+ * \brief Given the heads of two singly linked-lists headA and headB, return the node at which the
+ * two lists intersect. If the two linked lists have no intersection at all, return nullptr. It is
+ * guaranteed that there are no cycles anywhere in the entire linked structure. Note that the linked
+ * lists must retain their original structure after the function returns. LeetCode problem 160
+ * \tparam T templated parameter stored within each ListNode
+ * \param headA Starting node for List A
+ * \param headB Starting Node for List B
+ * \note O(m + n) runtime, O(1) space
+ * \return The node at which the two lists intersect, if they do at all
+ */
+template<typename T>
+typename SinglyLinkedList<T>::ListNode* SinglyLinkedList<T>::getIntersectionNode(
+    SinglyLinkedList::ListNode* headA, SinglyLinkedList::ListNode* headB)
+{
+    ListNode* pA = headA;
+    ListNode* pB = headB;
+    while (pA != pB)
+    {
+        pA = pA == nullptr ? headB : pA->next;
+        pB = pB == nullptr ? headA : pB->next;
+    }
+    return pA;
+}
+
+/**
+ * \brief append on SinglyLinkedList to another without allocating anymore memory
+ * \tparam T template parameter stored within each ListNode
+ * \param otherList to append to the current List calling this method
+ * \note O(1) runtime, O(1) space
+ */
+template<typename T>
+void SinglyLinkedList<T>::append(const SinglyLinkedList<T>& otherList)
+{
+    this->m_pTail->next = otherList.m_pHead;
+}
+

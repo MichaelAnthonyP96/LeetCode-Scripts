@@ -144,6 +144,37 @@ TEST(addTwoNumbers, DISABLED_TwoNegativeEqualLengthLists) {
     EXPECT_TRUE((++itr) == result->end());
 }
 
+TEST(getIntersectionNode, TwoUnEqualLengthLists) {
+    // 4 -> 1
+    SinglyLinkedList<int>* listA = SinglyLinkedList<int>::integerToLinkedList(41);
+
+    // 5 -> 6 -> 1
+    SinglyLinkedList<int>* listB = SinglyLinkedList<int>::integerToLinkedList(561);
+
+    // 8 -> 4 -> 5
+    SinglyLinkedList<int>* listC =  SinglyLinkedList<int>::integerToLinkedList(845);
+
+    // Attach 8 -> 4 -> 5 to the end of both lists
+    listA->append(*listC);
+    listB->append(*listC);
+
+    // The result should be the start of listC, which was appended onto A & B
+    auto result = SinglyLinkedList<int>::getIntersectionNode(*listA, *listB);
+    ASSERT_EQ(listC->begin().getNode(), result);
+}
+
+TEST(getIntersectionNode, NoIntersection) {
+    // 2 -> 6 -> 4
+    SinglyLinkedList<int>* listA = SinglyLinkedList<int>::integerToLinkedList(264);
+
+    // 1 -> 5
+    SinglyLinkedList<int>* listB = SinglyLinkedList<int>::integerToLinkedList(15);
+
+    // The result should be nullptr since the lists do not share any common nodes
+    auto result = SinglyLinkedList<int>::getIntersectionNode(*listA, *listB);
+    ASSERT_EQ(nullptr, result);
+}
+
 int main(int argc, char** argv)
 {
     ::testing::InitGoogleTest(&argc, argv);

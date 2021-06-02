@@ -25,6 +25,7 @@ add_executable(listTests ${LIST_TEST_ALL_FILES})
 ################################################# INCLUDE DIRECTORIES ##################################################
 target_include_directories(listTests
         PUBLIC
+        "$<BUILD_INTERFACE:$<TARGET_PROPERTY:listUtil,INTERFACE_INCLUDE_DIRECTORIES>>"
         "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
         )
 
@@ -34,7 +35,6 @@ target_include_directories(listTests
 target_link_libraries(listTests PUBLIC
         gtest
         gmock
-        listUtil
         )
 
 ####################################################### TESTING ########################################################
