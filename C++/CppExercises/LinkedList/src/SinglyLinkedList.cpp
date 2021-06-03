@@ -850,3 +850,75 @@ bool SinglyLinkedList<T>::hasCycle(SinglyLinkedList::ListNode* head)
     }
     return false;
 }
+
+/**
+ * \brief Given the head of a singly linked list, return true if it is a palindrome. LeetCode
+ * Problem 234
+ * \tparam T template parameter stored in each ListNode
+ * \param l List with which to determine if its a valid palindrome
+ * \note O(n) runtime, O(n) space
+ * \return True or False whether or not the list is a valid palindrome
+ */
+template<typename T>
+bool SinglyLinkedList<T>::isPalindrome(SinglyLinkedList<T>& l)
+{
+    return isPalindrome(l.m_pHead);
+}
+
+/**
+ * \brief Given the head of a singly linked list, return true if it is a palindrome. LeetCode
+ * Problem 234
+ * \tparam T template parameter stored in each ListNode
+ * \param head Start of the list with which to start determining whether or not a is a palindrome
+ * \note O(n) runtime, O(n) space
+ * \return True or False whether or not the list is a valid palindrome
+ */
+template<typename T>
+bool SinglyLinkedList<T>::isPalindrome(SinglyLinkedList::ListNode* head)
+{
+    // get the size of the linked list
+    int size = 0;
+    std::stack<int> s;
+    ListNode* itr = head;
+    while (itr != nullptr)
+    {
+        itr = itr->next;
+        ++size;
+    }
+
+    if (size == 1)
+    {
+        return true;
+    }
+
+    bool isOdd = (size % 2) == 1;
+    int idx = 1;
+    itr = head;
+    while (itr != nullptr)
+    {
+        // push the first half of the list onto a stack
+        if (idx <= (size / 2))
+        {
+            s.push(itr->val);
+        }
+        else
+        {
+            if (isOdd && (idx == ((size/2) + 1)))
+            {
+                // ignore the middle most node on odd length linked lists
+            }
+            else
+            {
+                if (s.top() != itr->val)
+                {
+                    // Check that the node onto of the stack is equal to the current
+                    return false;
+                }
+                s.pop();
+            }
+        }
+        itr = itr->next;
+        ++idx;
+    }
+    return true;
+}

@@ -194,6 +194,26 @@ TEST(findCycle, cycleFound) {
     ASSERT_TRUE(SinglyLinkedList<int>::hasCycle(*listA));
 }
 
+TEST(isPalindrome, oddLength) {
+    SinglyLinkedList<int>* listA = SinglyLinkedList<int>::integerToLinkedList(101);
+    SinglyLinkedList<int>* listB = SinglyLinkedList<int>::integerToLinkedList(1);
+    SinglyLinkedList<int>* listC = SinglyLinkedList<int>::integerToLinkedList(12321);
+
+    ASSERT_TRUE(SinglyLinkedList<int>::isPalindrome(*listA));
+    ASSERT_TRUE(SinglyLinkedList<int>::isPalindrome(*listB));
+    ASSERT_TRUE(SinglyLinkedList<int>::isPalindrome(*listC));
+}
+
+TEST(isPalindrome, evenLength) {
+    SinglyLinkedList<int>* listA = SinglyLinkedList<int>::integerToLinkedList(1001);
+    SinglyLinkedList<int>* listB = SinglyLinkedList<int>::integerToLinkedList(10);
+    SinglyLinkedList<int>* listC = SinglyLinkedList<int>::integerToLinkedList(121111);
+
+    ASSERT_TRUE(SinglyLinkedList<int>::isPalindrome(*listA));
+    ASSERT_FALSE(SinglyLinkedList<int>::isPalindrome(*listB));
+    ASSERT_FALSE(SinglyLinkedList<int>::isPalindrome(*listC));
+}
+
 int main(int argc, char** argv)
 {
     ::testing::InitGoogleTest(&argc, argv);
