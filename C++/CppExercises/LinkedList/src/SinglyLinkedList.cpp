@@ -50,7 +50,7 @@ template<typename T>
 const typename SinglyLinkedList<T>::ListIterator SinglyLinkedList<T>::ListIterator::operator++(int)
 {
     ListNode* r = p;
-    p = p->next;
+    p           = p->next;
     return ListIterator(r);
 }
 template<typename T>
@@ -124,8 +124,8 @@ SinglyLinkedList<T>::SinglyLinkedList(const SinglyLinkedList<T>&& other) noexcep
     if (this != &other)
     {
         clear();
-        m_pHead = std::move(other.m_pHead);
-        m_pTail = std::move(other.m_pTail);
+        m_pHead  = std::move(other.m_pHead);
+        m_pTail  = std::move(other.m_pTail);
         m_length = std::move(other.m_length);
     }
 }
@@ -147,8 +147,8 @@ SinglyLinkedList<T>& SinglyLinkedList<T>::operator=(SinglyLinkedList<T>&& rhs) n
     if (this != &rhs)
     {
         clear();
-        m_pHead = std::move(rhs.m_pHead);
-        m_pTail = std::move(rhs.m_pTail);
+        m_pHead  = std::move(rhs.m_pHead);
+        m_pTail  = std::move(rhs.m_pTail);
         m_length = std::move(rhs.m_length);
     }
     return *this;
@@ -158,14 +158,14 @@ template<typename T>
 void SinglyLinkedList<T>::copy(const SinglyLinkedList<T>& other)
 {
     // set up the default, empty list
-    m_pHead = nullptr;
-    m_pTail = nullptr;
+    m_pHead  = nullptr;
+    m_pTail  = nullptr;
     m_length = 0;
 
     // if we have things to copy
     if (!other.empty())
     {
-        ListNode* curr = other.m_pHead;
+        ListNode* curr     = other.m_pHead;
         ListNode* previous = nullptr;
         // iterate down the parameter list
         while (curr != nullptr)
@@ -185,11 +185,11 @@ void SinglyLinkedList<T>::copy(const SinglyLinkedList<T>& other)
             }
 
             previous = node;
-            curr = curr->next;
+            curr     = curr->next;
         }
 
         // prev will contain our new tail---set it up accordingly
-        m_pTail = previous;
+        m_pTail       = previous;
         m_pTail->next = nullptr;
 
         m_length = other.m_length;
@@ -202,12 +202,12 @@ void SinglyLinkedList<T>::clear()
     ListNode* temp = m_pHead;  // points to beginning of linked list
     while (temp != nullptr)
     {
-        ListNode* previous = temp;  // holds the past link while we move to the next
-        temp = temp->next;          // move onto next link
-        delete previous;            // deletes the old link
+        ListNode* previous = temp;        // holds the past link while we move to the next
+        temp               = temp->next;  // move onto next link
+        delete previous;                  // deletes the old link
     }
-    m_pTail = nullptr;  // sets tail and head pointers to null
-    m_pHead = nullptr;
+    m_pTail  = nullptr;  // sets tail and head pointers to null
+    m_pHead  = nullptr;
     m_length = 0;
 }
 
@@ -255,7 +255,7 @@ void SinglyLinkedList<T>::insertFront(const T& nData)
     else
     {
         node->next = m_pHead;  // new Node's next is the second Node
-        m_pHead = node;        // head points to the new Node at the front
+        m_pHead    = node;     // head points to the new Node at the front
     }
     m_length++;
 }
@@ -274,7 +274,7 @@ void SinglyLinkedList<T>::insertBack(const T& nData)
     else
     {
         m_pTail->next = node;  // second to last Node's next is the New Node
-        m_pTail = node;        // tail points to the new Node at the back
+        m_pTail       = node;  // tail points to the new Node at the back
     }
     m_length++;
 }
@@ -288,10 +288,10 @@ void SinglyLinkedList<T>::reverse()
         return;
     }
     ListNode* originalFront = m_pHead;
-    ListNode* originalBack = m_pTail;
+    ListNode* originalBack  = m_pTail;
 
     // iterate through the list and push pointers onto a stack
-    ListNode* itr = m_pHead;
+    ListNode*             itr = m_pHead;
     std::stack<ListNode*> s;
     while (itr != nullptr)
     {
@@ -300,7 +300,7 @@ void SinglyLinkedList<T>::reverse()
     }
 
     // Assign the first pointer on the stack to the head of the list
-    itr = m_pHead = s.top();
+    itr = m_pHead      = s.top();
     ListNode* previous = itr;
     // Now pop from the stack, assigning the next pointers along the way
     while (itr != nullptr)
@@ -313,7 +313,7 @@ void SinglyLinkedList<T>::reverse()
             m_pTail = itr;
         }
         previous->next = itr;
-        previous = previous->next;
+        previous       = previous->next;
     }
 }
 
@@ -334,8 +334,8 @@ SinglyLinkedList<T> SinglyLinkedList<T>::split(int splitPoint)
     if (secondHead == m_pHead)
     {
         // if both heads point to the same place then the list is empty
-        m_pHead = nullptr;
-        m_pTail = nullptr;
+        m_pHead  = nullptr;
+        m_pTail  = nullptr;
         m_length = 0;
     }
     else
@@ -378,7 +378,7 @@ SinglyLinkedList<T> SinglyLinkedList<T>::split(ListNode* start, int splitPoint)
     }
     else
     {
-        ListNode* temp1 = m_pHead;
+        ListNode* temp1     = m_pHead;
         ListNode* otherTail = nullptr;
         while (splitPoint > 0)
         {
@@ -422,9 +422,9 @@ typename SinglyLinkedList<T>::ListNode* SinglyLinkedList<T>::merge(
     }
 
     ListNode* returnHead = first;
-    ListNode* tempFirst = first;
+    ListNode* tempFirst  = first;
     ListNode* tempSecond = second;
-    ListNode* tempFinal = returnHead;
+    ListNode* tempFinal  = returnHead;
     // Initializes the pointers before iterating down the lists
     // whichever list has the smaller starting node, place the
     // start of the resulting list there
@@ -435,7 +435,7 @@ typename SinglyLinkedList<T>::ListNode* SinglyLinkedList<T>::merge(
     else
     {
         returnHead = second;
-        tempFinal = returnHead;
+        tempFinal  = returnHead;
         tempSecond = second->next;
     }
     // Now iterate now both lists, extracting the smaller value
@@ -492,8 +492,8 @@ void SinglyLinkedList<T>::mergeWith(SinglyLinkedList<T> const& otherList)
     m_length = m_length + otherList.m_length;
 
     // empty out the parameter list
-    otherList.m_pHead = nullptr;
-    otherList.m_pTail = nullptr;
+    otherList.m_pHead  = nullptr;
+    otherList.m_pTail  = nullptr;
     otherList.m_length = 0;
 }
 
@@ -508,7 +508,7 @@ void SinglyLinkedList<T>::sort()
     ListNode *itr, *currMin;
     while (currHead->next != nullptr)
     {
-        itr = currHead->next;
+        itr     = currHead->next;
         currMin = currHead;
         while (itr != nullptr)
         {
@@ -518,10 +518,10 @@ void SinglyLinkedList<T>::sort()
             }
             itr = itr->next;
         }
-        T tmp = currHead->val;
+        T tmp         = currHead->val;
         currHead->val = currMin->val;
-        currMin->val = tmp;
-        currHead = currHead->next;
+        currMin->val  = tmp;
+        currHead      = currHead->next;
     }
 }
 
@@ -571,7 +571,7 @@ SinglyLinkedList<T>* SinglyLinkedList<T>::addTwoNumbers(SinglyLinkedList<T>& l1,
     }
 
     short carryOver = 0;
-    auto* ret = new SinglyLinkedList<T>();
+    auto* ret       = new SinglyLinkedList<T>();
     while (itr1 != l1.end() && itr2 != l2.end())
     {
         if (*itr1 + *itr2 + carryOver < 10)
@@ -617,7 +617,7 @@ T SinglyLinkedList<T>::linkedListToInteger()
     // return value
     T ret = 0;
     // exponent value used to march through linked list
-    int exponent = 0;
+    int                                 exponent = 0;
     SinglyLinkedList<int>::ListIterator itr(this->begin());
     // until the end of the list
     while (itr != this->end())
@@ -663,14 +663,14 @@ SinglyLinkedList<T>* SinglyLinkedList<T>::integerToLinkedList(T num)
 template<typename T>
 typename SinglyLinkedList<T>::ListNode* SinglyLinkedList<T>::middleNode()
 {
-    int count = 0;
-    ListNode* temp = m_pHead;
+    int       count = 0;
+    ListNode* temp  = m_pHead;
     for (; temp != nullptr; temp = temp->next)
     {
         count++;
     }
     count = (count / 2) + 1;
-    temp = m_pHead;
+    temp  = m_pHead;
     for (int i = 1; i < count; i++)
     {
         temp = temp->next;
@@ -718,7 +718,7 @@ typename SinglyLinkedList<T>::ListNode* SinglyLinkedList<T>::insertionSort(ListN
     ListNode *itr, *currMin;
     while (currHead->getNext() != nullptr)
     {
-        itr = currHead->getNext();
+        itr     = currHead->getNext();
         currMin = currHead;
         while (itr != nullptr)
         {
@@ -771,8 +771,8 @@ typename SinglyLinkedList<T>::ListIterator SinglyLinkedList<T>::find(T searchVal
  * \return The node at which the two lists intersect, if they do at all
  */
 template<typename T>
-typename SinglyLinkedList<T>::ListNode* SinglyLinkedList<T>::getIntersectionNode(SinglyLinkedList<T>& lA,
-                                                                     SinglyLinkedList<T>& lB)
+typename SinglyLinkedList<T>::ListNode* SinglyLinkedList<T>::getIntersectionNode(
+    SinglyLinkedList<T>& lA, SinglyLinkedList<T>& lB)
 {
     return getIntersectionNode(lA.m_pHead, lB.m_pHead);
 }
@@ -877,9 +877,9 @@ template<typename T>
 bool SinglyLinkedList<T>::isPalindrome(SinglyLinkedList::ListNode* head)
 {
     // get the size of the linked list
-    int size = 0;
+    int             size = 0;
     std::stack<int> s;
-    ListNode* itr = head;
+    ListNode*       itr = head;
     while (itr != nullptr)
     {
         itr = itr->next;
@@ -892,8 +892,8 @@ bool SinglyLinkedList<T>::isPalindrome(SinglyLinkedList::ListNode* head)
     }
 
     bool isOdd = (size % 2) == 1;
-    int idx = 1;
-    itr = head;
+    int  idx   = 1;
+    itr        = head;
     while (itr != nullptr)
     {
         // push the first half of the list onto a stack
@@ -903,7 +903,7 @@ bool SinglyLinkedList<T>::isPalindrome(SinglyLinkedList::ListNode* head)
         }
         else
         {
-            if (isOdd && (idx == ((size/2) + 1)))
+            if (isOdd && (idx == ((size / 2) + 1)))
             {
                 // ignore the middle most node on odd length linked lists
             }
@@ -921,4 +921,69 @@ bool SinglyLinkedList<T>::isPalindrome(SinglyLinkedList::ListNode* head)
         ++idx;
     }
     return true;
+}
+
+/**
+ * \brief Given the head of a linked list and an integer val, remove all the nodes of the linked
+ * list that has Node.val == val, and return the new head. LeetCode Problem 203.
+ * \tparam T template parameter stored in each ListNode
+ * \param l A SinglyLinkedList obj to perform this on, afterwards the function the values have been
+ * removed from this List
+ * \param val Value(s) to remove from the linked list
+ * \note O(n) runtime, O(1) space
+ */
+template<typename T>
+void SinglyLinkedList<T>::removeElements(SinglyLinkedList<T>& l, int val)
+{
+    SinglyLinkedList<T>::removeElements(l.m_pHead, l.m_pTail, val);
+}
+
+/**
+ * \brief Given the head of a linked list and an integer val, remove all the nodes of the linked
+ * list that has Node.val == val, and return the new head. LeetCode Problem 203.
+ * \tparam T template parameter stored in each ListNode
+ * \param head ListNode* pointer to the start of the linked list, updated during the function
+ * \param tail ListNode* pointer to the end of the linked list, updated during the function
+ * \param val Value(s) to remove from the linked list
+ * \return The new head of the linked list
+ */
+template<typename T>
+void SinglyLinkedList<T>::removeElements(
+    SinglyLinkedList::ListNode*& head, SinglyLinkedList::ListNode*& tail, int val)
+{
+    // ensure that the head is not the val we want to remove
+    while(head != nullptr && head->val == val)
+    {
+        ListNode* tmp = head;
+        head = head->next;
+        delete tmp;
+    }
+    // head is now either nullptr, or pointing to the first node that does not match val
+
+    // iterate through the list, discarding nodes which match the value
+    ListNode* itr = head;
+    ListNode* prev = itr;
+    while(itr != nullptr)
+    {
+        // itr matches the current value, be sure to deallocate the node
+        if (itr->val == val)
+        {
+            // prev should remain the same, since the value is being removed
+            prev->next = itr->next;
+            // create a temporary pointer to deallocate our node
+            ListNode* tmp = itr;
+            // always move itr forward
+            itr = itr->next;
+            // deallocate the node we determined to be a match
+            delete tmp;
+        }
+        else
+        {
+            // move prev forward since the value didn't match
+            prev = itr;
+            // always move itr forward
+            itr = itr->next;
+        }
+    }
+    tail = prev;
 }

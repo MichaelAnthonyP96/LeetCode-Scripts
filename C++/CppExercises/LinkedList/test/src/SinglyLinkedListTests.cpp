@@ -6,8 +6,8 @@
 //  Copyright © 2019 Michael Anthony Pope. All rights reserved.
 //
 
-#include "SinglyLinkedList.hpp"
 #include "gtest/gtest.h"
+#include "SinglyLinkedList.hpp"
 
 TEST(sort, ReverseOrder)
 {
@@ -95,7 +95,8 @@ TEST(sort, NullList)
     EXPECT_TRUE(itr == list.end());
 }
 
- TEST(addTwoNumbers, TwoPositiveEqualLengthLists) {
+TEST(addTwoNumbers, TwoPositiveEqualLengthLists)
+{
     // represents the number 243
     SinglyLinkedList<int> list1;
     list1.insertFront(2);
@@ -120,7 +121,8 @@ TEST(sort, NullList)
 }
 
 // TODO(mapope): Add negative flag to addTwoNumbers() and Sum() methods
-TEST(addTwoNumbers, DISABLED_TwoNegativeEqualLengthLists) {
+TEST(addTwoNumbers, DISABLED_TwoNegativeEqualLengthLists)
+{
     // represents the number -243
     SinglyLinkedList<int> list1;
     list1.insertFront(-2);
@@ -144,7 +146,8 @@ TEST(addTwoNumbers, DISABLED_TwoNegativeEqualLengthLists) {
     EXPECT_TRUE((++itr) == result->end());
 }
 
-TEST(getIntersectionNode, TwoUnEqualLengthLists) {
+TEST(getIntersectionNode, TwoUnEqualLengthLists)
+{
     // 4 -> 1
     SinglyLinkedList<int>* listA = SinglyLinkedList<int>::integerToLinkedList(41);
 
@@ -152,7 +155,7 @@ TEST(getIntersectionNode, TwoUnEqualLengthLists) {
     SinglyLinkedList<int>* listB = SinglyLinkedList<int>::integerToLinkedList(561);
 
     // 8 -> 4 -> 5
-    SinglyLinkedList<int>* listC =  SinglyLinkedList<int>::integerToLinkedList(845);
+    SinglyLinkedList<int>* listC = SinglyLinkedList<int>::integerToLinkedList(845);
 
     // Attach 8 -> 4 -> 5 to the end of both lists
     listA->append(*listC);
@@ -163,7 +166,8 @@ TEST(getIntersectionNode, TwoUnEqualLengthLists) {
     ASSERT_EQ(listC->begin().getNode(), result);
 }
 
-TEST(getIntersectionNode, NoIntersection) {
+TEST(getIntersectionNode, NoIntersection)
+{
     // 2 -> 6 -> 4
     SinglyLinkedList<int>* listA = SinglyLinkedList<int>::integerToLinkedList(264);
 
@@ -175,14 +179,16 @@ TEST(getIntersectionNode, NoIntersection) {
     ASSERT_EQ(nullptr, result);
 }
 
-TEST(findCycle, noCycle) {
+TEST(findCycle, noCycle)
+{
     // 2 -> 6 -> 4
     SinglyLinkedList<int>* listA = SinglyLinkedList<int>::integerToLinkedList(264);
 
     ASSERT_FALSE(SinglyLinkedList<int>::hasCycle(*listA));
 }
 
-TEST(findCycle, cycleFound) {
+TEST(findCycle, cycleFound)
+{
     // 2 -> 6 -> 4
     SinglyLinkedList<int>* listA = SinglyLinkedList<int>::integerToLinkedList(264);
 
@@ -194,7 +200,8 @@ TEST(findCycle, cycleFound) {
     ASSERT_TRUE(SinglyLinkedList<int>::hasCycle(*listA));
 }
 
-TEST(isPalindrome, oddLength) {
+TEST(isPalindrome, oddLength)
+{
     SinglyLinkedList<int>* listA = SinglyLinkedList<int>::integerToLinkedList(101);
     SinglyLinkedList<int>* listB = SinglyLinkedList<int>::integerToLinkedList(1);
     SinglyLinkedList<int>* listC = SinglyLinkedList<int>::integerToLinkedList(12321);
@@ -204,7 +211,8 @@ TEST(isPalindrome, oddLength) {
     ASSERT_TRUE(SinglyLinkedList<int>::isPalindrome(*listC));
 }
 
-TEST(isPalindrome, evenLength) {
+TEST(isPalindrome, evenLength)
+{
     SinglyLinkedList<int>* listA = SinglyLinkedList<int>::integerToLinkedList(1001);
     SinglyLinkedList<int>* listB = SinglyLinkedList<int>::integerToLinkedList(10);
     SinglyLinkedList<int>* listC = SinglyLinkedList<int>::integerToLinkedList(121111);
@@ -212,6 +220,47 @@ TEST(isPalindrome, evenLength) {
     ASSERT_TRUE(SinglyLinkedList<int>::isPalindrome(*listA));
     ASSERT_FALSE(SinglyLinkedList<int>::isPalindrome(*listB));
     ASSERT_FALSE(SinglyLinkedList<int>::isPalindrome(*listC));
+}
+
+TEST(removeElements, multipleDeletes)
+{
+    // 1 -> 2 -> 6 -> 3 -> 4 -> 5 -> 6
+    SinglyLinkedList<int>* listA = SinglyLinkedList<int>::integerToLinkedList(1263456);
+    SinglyLinkedList<int>::removeElements(*listA, 6);
+    auto itr = listA->begin();
+
+    ASSERT_EQ(*itr, 1);
+    ++itr;
+    ASSERT_EQ(*itr, 2);
+    ++itr;
+    ASSERT_EQ(*itr, 3);
+    ++itr;
+    ASSERT_EQ(*itr, 4);
+    ++itr;
+    ASSERT_EQ(*itr, 5);
+}
+
+TEST(removeElements, headDelete)
+{
+    // 6 -> 2 -> 6 -> 3 -> 4 -> 5 -> 6
+    SinglyLinkedList<int>* listA = SinglyLinkedList<int>::integerToLinkedList(6263456);
+    SinglyLinkedList<int>::removeElements(*listA, 6);
+    auto itr = listA->begin();
+
+    ASSERT_EQ(*itr, 2);
+    ++itr;
+    ASSERT_EQ(*itr, 3);
+    ++itr;
+    ASSERT_EQ(*itr, 4);
+    ++itr;
+    ASSERT_EQ(*itr, 5);
+}
+
+TEST(removeElements, nullList)
+{
+    // null
+    SinglyLinkedList<int> listA = SinglyLinkedList<int>();
+    ASSERT_NO_THROW(SinglyLinkedList<int>::removeElements(listA, 12));
 }
 
 int main(int argc, char** argv)

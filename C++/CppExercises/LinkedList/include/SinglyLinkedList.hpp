@@ -107,10 +107,12 @@ class SinglyLinkedList : public ListADT<T>
     static ListNode* getIntersectionNode(SinglyLinkedList<T>& lA, SinglyLinkedList<T>& lB);
     static bool hasCycle(SinglyLinkedList<T>& l);
     static bool isPalindrome(SinglyLinkedList<T>& l);
+    static void removeElements(SinglyLinkedList<T>& l, int val);
   private:
     static ListNode* getIntersectionNode(ListNode* headA, ListNode* headB);
     static bool hasCycle(ListNode* head);
     static bool isPalindrome(ListNode* head);
+    static void removeElements(ListNode*& head, ListNode*& tail, int val);
 };
 
 #include "SinglyLinkedList.cpp"
