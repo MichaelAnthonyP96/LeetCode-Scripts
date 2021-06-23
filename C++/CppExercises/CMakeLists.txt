@@ -107,6 +107,7 @@ target_include_directories(mathUtil
         $<INSTALL_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>)
 
 add_subdirectory(Array)
+add_subdirectory(Heap)
 add_subdirectory(LinkedList)
 add_subdirectory(String)
 
