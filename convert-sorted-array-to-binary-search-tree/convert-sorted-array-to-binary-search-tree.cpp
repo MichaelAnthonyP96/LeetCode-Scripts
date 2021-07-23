@@ -14,6 +14,7 @@ public:
     }
     
     TreeNode* sortedArrayToBST(vector<int>& nums, int start, int end) {
+        // base case where the start and end index overlap
         if (end <= start)
         {
             return nullptr;
