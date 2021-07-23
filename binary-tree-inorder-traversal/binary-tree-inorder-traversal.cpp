@@ -14,29 +14,29 @@ public:
     vector<int> inorderTraversal(TreeNode* root) {
         std::stack<TreeNode*> pendingNodes;
         std::vector<int> returnVals;
+        // start at the root node
         auto itr = root;
         do
         {
+            // Add each left subchild to the stack until we reach a nullptr
             while (itr != nullptr)
             {
-                std::cout << "Checkpoint 1" << std::endl;
                 pendingNodes.push(itr);
                 itr = itr->left;
             }
+            // if we are a nullptr and the stack still contains values...
             if (itr == nullptr && !pendingNodes.empty())
             {
-                std::cout << "Checkpoint 2" << std::endl;
+                // pop the last valid node
                 itr = pendingNodes.top();
                 pendingNodes.pop();
-                if (itr != nullptr)
-                {
-                    std::cout << "Checkpoint 3" << std::endl;
-                    returnVals.push_back(itr->val);
-                    itr = itr->right;
-                }
+                // add the value to the results
+                returnVals.push_back(itr->val);
+                // move to the right subtree of this node
+                itr = itr->right;
             }
-            std::cout << "Checkpoint 4" << std::endl;
         } while(itr != nullptr || !pendingNodes.empty());
+        // continue processing while the stack is not empty and our iterator is still valid
         return returnVals;
     }
 };
