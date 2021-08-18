@@ -23,14 +23,7 @@ public:
                 
             }
             divisor = double(size_);
-        }        
-        
-        // std::cout << "oldIdx_ = " << oldIdx_ << " divisor = " << divisor << std::endl;
-        // for (auto itr: window_)
-        // {
-        //     std::cout << itr << " ";
-        // }
-        // std::cout << std::endl;
+        }
         
         double sum = std::accumulate(window_.begin(), window_.end(), 0);
         return (sum / divisor);
