@@ -10,7 +10,7 @@ public:
         {
             if (matrix[i][j] < target)
             {
-                // move one column to the right, since all values to the right right in this row are larger
+                // move one column to the right, since all values to the right in this row are larger
                 ++j;
             }
             else if (matrix[i][j] > target)
