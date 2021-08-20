@@ -11,13 +11,16 @@ public:
         // iterate down the first column
         while ((i < matrix.size()) && target >= matrix[i][0])
         {
+            // if the start of the row is equal to the target, we are done
             if (matrix[i][0] == target)
             {
                 return true;
             }
-            // if the next item down the column is larger than the target, we know the value must be in this row
+            
+            // if the next row is still valid
             if (i+1 < matrix.size())
             {
+                // if the next item down the column is larger than the target, we know the value must be in this row
                 if (target < matrix[i+1][0])
                 {
                     // binary search the row
@@ -26,6 +29,7 @@ public:
             }
             else
             {
+                // we've hit the last row, search it anyway
                 return std::binary_search(matrix[i].begin(), matrix[i].end(), target);
             }
             ++i;
