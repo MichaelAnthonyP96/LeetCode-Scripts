@@ -1,16 +1,20 @@
 class MyCircularQueue {
 public:
-    MyCircularQueue(int k) : count(0), capacity(k) {}
+    MyCircularQueue(int k) : count(0), capacity(k), head(0), tail(0) 
+    {
+        buffer.resize(k);
+    }
     
     bool enQueue(int value) 
     {
-        if (isFull() || count == capacity)
+        if (isFull())
         {
             return false;
         }
         else
         {
-            buffer.push_back(value);
+            tail = (head + count) % capacity;
+            buffer[tail] = value;
             ++count;
             return true;
         }
@@ -18,14 +22,15 @@ public:
     
     bool deQueue() 
     {
-        if (isEmpty() || count == 0)
+        if (isEmpty())
         {
             return false;
         }
         else
         {
-            buffer.pop_front();
+            buffer[head] = 0;
             --count;
+            head = (head + 1) % capacity;
             return true;
         }
         
@@ -38,7 +43,7 @@ public:
             return -1;
         }
         
-        return buffer.front();
+        return buffer[head];
     }
     
     int Rear() 
@@ -48,7 +53,7 @@ public:
             return -1;
         }
         
-        return buffer.back();    
+        return buffer[tail];    
     }
     
     bool isEmpty() 
@@ -61,7 +66,9 @@ public:
         return capacity == count;
     }
 private: 
-    std::list<int> buffer;
+    std::vector<int> buffer;
+    int head;
+    int tail;
     int count;
     int capacity;
 };
