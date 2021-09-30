@@ -7,8 +7,11 @@ public:
         {
             return 1;
         }
-        std::vector<int> stairs(n);
-        std::fill(stairs.begin(), stairs.end(), -1);
+        else if (n == 2)
+        {
+            return 2;
+        }
+        std::vector<int> stairs(n, -1);
         
         stairs[0] = 1;
         stairs[1] = 2;
@@ -17,6 +20,7 @@ public:
         {
             stairs[i] = stairs[i-1] + stairs[i-2];
         }
+        
         return stairs[n-1];
     }
 };
