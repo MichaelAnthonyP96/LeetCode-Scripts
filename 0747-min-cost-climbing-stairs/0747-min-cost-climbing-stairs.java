@@ -6,6 +6,8 @@ class Solution {
         runningCosts[0] = cost[0];
         runningCosts[1] = cost[1];
         
+        // iterate up the stairs consider the cost of the current stair plus the min
+        // of the previous two stairs
         for (int i = 2; i < cost.length; ++i) {
             runningCosts[i] = cost[i] + Math.min(runningCosts[i-1], runningCosts[i-2]);
         }
