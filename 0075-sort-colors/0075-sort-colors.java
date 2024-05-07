@@ -1,20 +1,21 @@
 class Solution {
     public void sortColors(int[] nums) {
-        int index = 0;
-        int currMin = Integer.MIN_VALUE;
-        for (int i = 0; i < nums.length; ++i) {
-            // find the min value
-            currMin = nums[i];
-            for (int j = i + 1; j < nums.length; ++j){
-                if (nums[j] < currMin) {
-                    currMin = nums[j];
-                    index = j;
-                }
-             }
-            
-            if (currMin < nums[i]) {
+        if (nums.length == 1) return;
+        int leftIndex = 0;
+        int rightIndex = nums.length - 1;
+        int curr = 0;
+        while(curr <= rightIndex) {
+            if (nums[curr] == 0) {
+                swap(curr, leftIndex, nums);
+                leftIndex++;
+                curr++;
+            }
+            else if (nums[curr] == 2) {
                 // swap the min we found with the current value
-                swap(i, index, nums);
+                swap(curr, rightIndex, nums);
+                rightIndex--;
+            } else {
+                ++curr;
             }
         }       
     }
