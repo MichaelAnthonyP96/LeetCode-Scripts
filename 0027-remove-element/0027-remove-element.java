@@ -24,8 +24,7 @@ class Solution {
                 return j;
             }       
         }
-        // we didn't find a value to swap, meaning we are done and this marks
-        // the count of how many we swapped
+        // we didn't find a value to swap
         return -1;
     }
 }
