@@ -15,7 +15,10 @@ class Solution {
                 // to the list of visited and push the keys in that
                 // room to the stack
                 if (visitedRooms.add(i)) {
-                    stack.push(rooms.get(i));
+                    List<Integer> keys = rooms.get(i);
+                    if (!keys.isEmpty()) {
+                        stack.push(keys);
+                    }
                 }
             }
         }
