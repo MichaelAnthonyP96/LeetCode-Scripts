@@ -13,4 +13,16 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2616-maximal-score-after-applying-k-operations](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2616-maximal-score-after-applying-k-operations) |
+## Linked List
+|  |
+| ------- |
+| [2903-insert-greatest-common-divisors-in-linked-list](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2903-insert-greatest-common-divisors-in-linked-list) |
+## Math
+|  |
+| ------- |
+| [2903-insert-greatest-common-divisors-in-linked-list](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2903-insert-greatest-common-divisors-in-linked-list) |
+## Number Theory
+|  |
+| ------- |
+| [2903-insert-greatest-common-divisors-in-linked-list](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2903-insert-greatest-common-divisors-in-linked-list) |
 <!---LeetCode Topics End-->
