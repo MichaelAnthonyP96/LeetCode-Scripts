@@ -30,6 +30,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## String
 |  |
 | ------- |
+| [0008-string-to-integer-atoi](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0008-string-to-integer-atoi) |
 | [1089-remove-vowels-from-a-string](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1089-remove-vowels-from-a-string) |
 ## Bit Manipulation
 |  |
