@@ -1,14 +1,12 @@
 class Solution {
     public String convertDateToBinary(String date) {
-        int firstHyphen = date.indexOf("-");
-        String year = date.substring(0, firstHyphen);
+        String year = date.substring(0, 4);
         System.out.println(year);
 
-        int secondHyphen = date.indexOf("-", firstHyphen + 1);
-        String month = date.substring(firstHyphen + 1, secondHyphen);
+        String month = date.substring(5, 7);
         System.out.println(month);
 
-        String day = date.substring(secondHyphen + 1);
+        String day = date.substring(8);
         System.out.println(day);
 
         return Integer.toBinaryString(Integer.valueOf(year)) + "-" +
