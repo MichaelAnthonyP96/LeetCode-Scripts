@@ -4,6 +4,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [1572-subrectangle-queries](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1572-subrectangle-queries) |
 | [1580-shuffle-the-array](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1580-shuffle-the-array) |
 | [2058-concatenation-of-array](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2058-concatenation-of-array) |
 | [2616-maximal-score-after-applying-k-operations](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2616-maximal-score-after-applying-k-operations) |
@@ -49,4 +50,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2058-concatenation-of-array](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2058-concatenation-of-array) |
+## Design
+|  |
+| ------- |
+| [1572-subrectangle-queries](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1572-subrectangle-queries) |
+## Matrix
+|  |
+| ------- |
+| [1572-subrectangle-queries](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1572-subrectangle-queries) |
 <!---LeetCode Topics End-->
