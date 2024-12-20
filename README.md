@@ -14,6 +14,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2616-maximal-score-after-applying-k-operations](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2616-maximal-score-after-applying-k-operations) |
 | [2876-number-of-employees-who-met-the-target](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2876-number-of-employees-who-met-the-target) |
 | [3194-find-words-containing-character](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/3194-find-words-containing-character) |
+| [3555-final-array-state-after-k-multiplication-operations-i](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/3555-final-array-state-after-k-multiplication-operations-i) |
 ## Greedy
 |  |
 | ------- |
@@ -22,6 +23,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2616-maximal-score-after-applying-k-operations](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2616-maximal-score-after-applying-k-operations) |
+| [3555-final-array-state-after-k-multiplication-operations-i](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/3555-final-array-state-after-k-multiplication-operations-i) |
 ## Linked List
 |  |
 | ------- |
@@ -34,6 +36,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2491-smallest-even-multiple](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2491-smallest-even-multiple) |
 | [2812-find-the-maximum-achievable-number](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2812-find-the-maximum-achievable-number) |
 | [2903-insert-greatest-common-divisors-in-linked-list](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2903-insert-greatest-common-divisors-in-linked-list) |
+| [3555-final-array-state-after-k-multiplication-operations-i](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/3555-final-array-state-after-k-multiplication-operations-i) |
 | [3567-convert-date-to-binary](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/3567-convert-date-to-binary) |
 ## Number Theory
 |  |
@@ -62,6 +65,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2058-concatenation-of-array](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2058-concatenation-of-array) |
+| [3555-final-array-state-after-k-multiplication-operations-i](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/3555-final-array-state-after-k-multiplication-operations-i) |
 ## Design
 |  |
 | ------- |
