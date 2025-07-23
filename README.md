@@ -15,6 +15,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2876-number-of-employees-who-met-the-target](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2876-number-of-employees-who-met-the-target) |
 | [3194-find-words-containing-character](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/3194-find-words-containing-character) |
 | [3555-final-array-state-after-k-multiplication-operations-i](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/3555-final-array-state-after-k-multiplication-operations-i) |
+| [3778-transform-array-by-parity](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/3778-transform-array-by-parity) |
 ## Greedy
 |  |
 | ------- |
@@ -99,4 +100,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1570-final-prices-with-a-special-discount-in-a-shop](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1570-final-prices-with-a-special-discount-in-a-shop) |
+## Sorting
+|  |
+| ------- |
+| [3778-transform-array-by-parity](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/3778-transform-array-by-parity) |
+## Counting
+|  |
+| ------- |
+| [3778-transform-array-by-parity](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/3778-transform-array-by-parity) |
 <!---LeetCode Topics End-->
