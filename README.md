@@ -58,6 +58,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1993-sum-of-all-subset-xor-totals](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1993-sum-of-all-subset-xor-totals) |
+| [2323-minimum-bit-flips-to-convert-number](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2323-minimum-bit-flips-to-convert-number) |
 | [2519-find-the-original-array-of-prefix-xor](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2519-find-the-original-array-of-prefix-xor) |
 | [3370-guess-the-number-using-bitwise-questions-i](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/3370-guess-the-number-using-bitwise-questions-i) |
 ## Interactive
