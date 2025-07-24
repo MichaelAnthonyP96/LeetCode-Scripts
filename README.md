@@ -64,6 +64,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Bit Manipulation
 |  |
 | ------- |
+| [0191-number-of-1-bits](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0191-number-of-1-bits) |
 | [1993-sum-of-all-subset-xor-totals](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1993-sum-of-all-subset-xor-totals) |
 | [2323-minimum-bit-flips-to-convert-number](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2323-minimum-bit-flips-to-convert-number) |
 | [2519-find-the-original-array-of-prefix-xor](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2519-find-the-original-array-of-prefix-xor) |
@@ -139,4 +140,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2148-minimum-number-of-moves-to-seat-everyone](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2148-minimum-number-of-moves-to-seat-everyone) |
+## Divide and Conquer
+|  |
+| ------- |
+| [0191-number-of-1-bits](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0191-number-of-1-bits) |
 <!---LeetCode Topics End-->
