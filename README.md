@@ -110,6 +110,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Stack
 |  |
 | ------- |
+| [0144-binary-tree-preorder-traversal](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0144-binary-tree-preorder-traversal) |
 | [1570-final-prices-with-a-special-discount-in-a-shop](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1570-final-prices-with-a-special-discount-in-a-shop) |
 ## Monotonic Stack
 |  |
@@ -151,10 +152,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0112-path-sum](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0112-path-sum) |
+| [0144-binary-tree-preorder-traversal](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0144-binary-tree-preorder-traversal) |
 ## Depth-First Search
 |  |
 | ------- |
 | [0112-path-sum](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0112-path-sum) |
+| [0144-binary-tree-preorder-traversal](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0144-binary-tree-preorder-traversal) |
 ## Breadth-First Search
 |  |
 | ------- |
@@ -163,6 +166,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0112-path-sum](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0112-path-sum) |
+| [0144-binary-tree-preorder-traversal](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0144-binary-tree-preorder-traversal) |
 ## Dynamic Programming
 |  |
 | ------- |
