@@ -55,6 +55,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0008-string-to-integer-atoi](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0008-string-to-integer-atoi) |
+| [0125-valid-palindrome](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0125-valid-palindrome) |
 | [1089-remove-vowels-from-a-string](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1089-remove-vowels-from-a-string) |
 | [1123-single-row-keyboard](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1123-single-row-keyboard) |
 | [1797-goal-parser-interpretation](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1797-goal-parser-interpretation) |
@@ -132,6 +133,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Two Pointers
 |  |
 | ------- |
+| [0125-valid-palindrome](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0125-valid-palindrome) |
 | [2917-count-pairs-whose-sum-is-less-than-target](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2917-count-pairs-whose-sum-is-less-than-target) |
 ## Binary Search
 |  |
