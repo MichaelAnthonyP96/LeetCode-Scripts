@@ -14,16 +14,15 @@ public class Solution extends Reader4 {
         int copiedChars = 0;
         char[] internalBuf = new char[4];
         int readChars = read4(internalBuf);
-        while(readChars > 0 && count < n) {
+        while (readChars > 0 && count < n) {
             for (int i = 0; i < readChars; ++i) {
-                // if (copiedChars == n) return copiedChars;
                 buf[copiedChars] = internalBuf[i];
                 ++copiedChars;
             }
             count += readChars;
             readChars = read4(internalBuf);
         }
-        
+
         return count > n ? n : count;
     }
 }
