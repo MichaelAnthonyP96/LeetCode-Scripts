@@ -14,6 +14,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1993-sum-of-all-subset-xor-totals](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1993-sum-of-all-subset-xor-totals) |
 | [2058-concatenation-of-array](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2058-concatenation-of-array) |
 | [2148-minimum-number-of-moves-to-seat-everyone](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2148-minimum-number-of-moves-to-seat-everyone) |
+| [2265-partition-array-according-to-given-pivot](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2265-partition-array-according-to-given-pivot) |
 | [2454-largest-local-values-in-a-matrix](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2454-largest-local-values-in-a-matrix) |
 | [2519-find-the-original-array-of-prefix-xor](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2519-find-the-original-array-of-prefix-xor) |
 | [2616-maximal-score-after-applying-k-operations](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2616-maximal-score-after-applying-k-operations) |
@@ -85,6 +86,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0157-read-n-characters-given-read4](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0157-read-n-characters-given-read4) |
 | [2058-concatenation-of-array](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2058-concatenation-of-array) |
+| [2265-partition-array-according-to-given-pivot](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2265-partition-array-according-to-given-pivot) |
 | [3555-final-array-state-after-k-multiplication-operations-i](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/3555-final-array-state-after-k-multiplication-operations-i) |
 | [3811-reverse-degree-of-a-string](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/3811-reverse-degree-of-a-string) |
 ## Design
@@ -144,6 +146,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0125-valid-palindrome](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0125-valid-palindrome) |
+| [2265-partition-array-according-to-given-pivot](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2265-partition-array-according-to-given-pivot) |
 | [2917-count-pairs-whose-sum-is-less-than-target](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2917-count-pairs-whose-sum-is-less-than-target) |
 ## Binary Search
 |  |
