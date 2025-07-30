@@ -10,6 +10,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1572-subrectangle-queries](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1572-subrectangle-queries) |
 | [1580-shuffle-the-array](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1580-shuffle-the-array) |
 | [1742-widest-vertical-area-between-two-points-containing-no-points](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1742-widest-vertical-area-between-two-points-containing-no-points) |
+| [1895-minimum-number-of-operations-to-move-all-balls-to-each-box](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1895-minimum-number-of-operations-to-move-all-balls-to-each-box) |
 | [1993-sum-of-all-subset-xor-totals](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1993-sum-of-all-subset-xor-totals) |
 | [2058-concatenation-of-array](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2058-concatenation-of-array) |
 | [2148-minimum-number-of-moves-to-seat-everyone](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2148-minimum-number-of-moves-to-seat-everyone) |
@@ -61,6 +62,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1089-remove-vowels-from-a-string](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1089-remove-vowels-from-a-string) |
 | [1123-single-row-keyboard](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1123-single-row-keyboard) |
 | [1797-goal-parser-interpretation](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1797-goal-parser-interpretation) |
+| [1895-minimum-number-of-operations-to-move-all-balls-to-each-box](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1895-minimum-number-of-operations-to-move-all-balls-to-each-box) |
 | [3194-find-words-containing-character](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/3194-find-words-containing-character) |
 | [3567-convert-date-to-binary](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/3567-convert-date-to-binary) |
 | [3811-reverse-degree-of-a-string](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/3811-reverse-degree-of-a-string) |
@@ -136,6 +138,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Prefix Sum
 |  |
 | ------- |
+| [1895-minimum-number-of-operations-to-move-all-balls-to-each-box](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1895-minimum-number-of-operations-to-move-all-balls-to-each-box) |
 | [2714-left-and-right-sum-differences](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2714-left-and-right-sum-differences) |
 ## Two Pointers
 |  |
