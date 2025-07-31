@@ -44,6 +44,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [1993-sum-of-all-subset-xor-totals](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1993-sum-of-all-subset-xor-totals) |
 | [2383-add-two-integers](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2383-add-two-integers) |
+| [2481-strictly-palindromic-number](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2481-strictly-palindromic-number) |
 | [2491-smallest-even-multiple](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2491-smallest-even-multiple) |
 | [2812-find-the-maximum-achievable-number](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2812-find-the-maximum-achievable-number) |
 | [2903-insert-greatest-common-divisors-in-linked-list](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2903-insert-greatest-common-divisors-in-linked-list) |
@@ -147,6 +148,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0125-valid-palindrome](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0125-valid-palindrome) |
 | [2265-partition-array-according-to-given-pivot](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2265-partition-array-according-to-given-pivot) |
+| [2481-strictly-palindromic-number](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2481-strictly-palindromic-number) |
 | [2917-count-pairs-whose-sum-is-less-than-target](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2917-count-pairs-whose-sum-is-less-than-target) |
 ## Binary Search
 |  |
@@ -186,4 +188,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0118-pascals-triangle](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0118-pascals-triangle) |
+## Brainteaser
+|  |
+| ------- |
+| [2481-strictly-palindromic-number](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2481-strictly-palindromic-number) |
 <!---LeetCode Topics End-->
