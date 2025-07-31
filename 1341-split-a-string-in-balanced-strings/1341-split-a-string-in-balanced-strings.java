@@ -5,9 +5,8 @@ class Solution {
 
         for (char c : s.toCharArray()) {
             if (!stack.isEmpty() &&
-                (stack.peek() == 'R' && c == 'L' ||
-                stack.peek() == 'L' && c == 'R')
-                ) {
+                (c == 'L' && stack.peek() == 'R' ||
+                 c == 'R' && stack.peek() == 'L')) {
                 stack.pop();
             } else {
                 stack.push(c);
