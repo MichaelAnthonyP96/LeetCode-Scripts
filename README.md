@@ -198,4 +198,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2481-strictly-palindromic-number](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2481-strictly-palindromic-number) |
+## Graph
+|  |
+| ------- |
+| [1916-find-center-of-star-graph](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1916-find-center-of-star-graph) |
 <!---LeetCode Topics End-->
