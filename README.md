@@ -15,6 +15,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1993-sum-of-all-subset-xor-totals](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1993-sum-of-all-subset-xor-totals) |
 | [2058-concatenation-of-array](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2058-concatenation-of-array) |
 | [2148-minimum-number-of-moves-to-seat-everyone](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2148-minimum-number-of-moves-to-seat-everyone) |
+| [2219-maximum-number-of-words-found-in-sentences](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2219-maximum-number-of-words-found-in-sentences) |
 | [2265-partition-array-according-to-given-pivot](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2265-partition-array-according-to-given-pivot) |
 | [2454-largest-local-values-in-a-matrix](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2454-largest-local-values-in-a-matrix) |
 | [2519-find-the-original-array-of-prefix-xor](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2519-find-the-original-array-of-prefix-xor) |
@@ -70,6 +71,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1797-goal-parser-interpretation](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1797-goal-parser-interpretation) |
 | [1895-minimum-number-of-operations-to-move-all-balls-to-each-box](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1895-minimum-number-of-operations-to-move-all-balls-to-each-box) |
 | [1904-second-largest-digit-in-a-string](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1904-second-largest-digit-in-a-string) |
+| [2219-maximum-number-of-words-found-in-sentences](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2219-maximum-number-of-words-found-in-sentences) |
 | [3194-find-words-containing-character](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/3194-find-words-containing-character) |
 | [3453-generate-binary-strings-without-adjacent-zeros](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/3453-generate-binary-strings-without-adjacent-zeros) |
 | [3567-convert-date-to-binary](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/3567-convert-date-to-binary) |
