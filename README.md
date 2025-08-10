@@ -4,6 +4,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0033-search-in-rotated-sorted-array](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0033-search-in-rotated-sorted-array) |
 | [0118-pascals-triangle](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0118-pascals-triangle) |
 | [0157-read-n-characters-given-read4](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0157-read-n-characters-given-read4) |
 | [1570-final-prices-with-a-special-discount-in-a-shop](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1570-final-prices-with-a-special-discount-in-a-shop) |
@@ -175,6 +176,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Binary Search
 |  |
 | ------- |
+| [0033-search-in-rotated-sorted-array](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0033-search-in-rotated-sorted-array) |
 | [2917-count-pairs-whose-sum-is-less-than-target](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2917-count-pairs-whose-sum-is-less-than-target) |
 ## Counting Sort
 |  |
