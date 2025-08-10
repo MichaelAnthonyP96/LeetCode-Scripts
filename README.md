@@ -48,6 +48,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Math
 |  |
 | ------- |
+| [0029-divide-two-integers](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0029-divide-two-integers) |
 | [1993-sum-of-all-subset-xor-totals](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1993-sum-of-all-subset-xor-totals) |
 | [2383-add-two-integers](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2383-add-two-integers) |
 | [2481-strictly-palindromic-number](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2481-strictly-palindromic-number) |
@@ -83,6 +84,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Bit Manipulation
 |  |
 | ------- |
+| [0029-divide-two-integers](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0029-divide-two-integers) |
 | [0191-number-of-1-bits](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0191-number-of-1-bits) |
 | [1993-sum-of-all-subset-xor-totals](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1993-sum-of-all-subset-xor-totals) |
 | [2323-minimum-bit-flips-to-convert-number](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2323-minimum-bit-flips-to-convert-number) |
