@@ -180,12 +180,14 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Tree
 |  |
 | ------- |
+| [0098-validate-binary-search-tree](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0098-validate-binary-search-tree) |
 | [0112-path-sum](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0112-path-sum) |
 | [0144-binary-tree-preorder-traversal](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0144-binary-tree-preorder-traversal) |
 | [0145-binary-tree-postorder-traversal](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0145-binary-tree-postorder-traversal) |
 ## Depth-First Search
 |  |
 | ------- |
+| [0098-validate-binary-search-tree](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0098-validate-binary-search-tree) |
 | [0112-path-sum](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0112-path-sum) |
 | [0144-binary-tree-preorder-traversal](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0144-binary-tree-preorder-traversal) |
 | [0145-binary-tree-postorder-traversal](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0145-binary-tree-postorder-traversal) |
@@ -196,6 +198,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Binary Tree
 |  |
 | ------- |
+| [0098-validate-binary-search-tree](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0098-validate-binary-search-tree) |
 | [0112-path-sum](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0112-path-sum) |
 | [0144-binary-tree-preorder-traversal](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0144-binary-tree-preorder-traversal) |
 | [0145-binary-tree-postorder-traversal](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0145-binary-tree-postorder-traversal) |
@@ -211,4 +214,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1916-find-center-of-star-graph](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1916-find-center-of-star-graph) |
+## Binary Search Tree
+|  |
+| ------- |
+| [0098-validate-binary-search-tree](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0098-validate-binary-search-tree) |
 <!---LeetCode Topics End-->
