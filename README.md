@@ -42,6 +42,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Linked List
 |  |
 | ------- |
+| [0114-flatten-binary-tree-to-linked-list](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0114-flatten-binary-tree-to-linked-list) |
 | [0138-copy-list-with-random-pointer](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0138-copy-list-with-random-pointer) |
 | [2903-insert-greatest-common-divisors-in-linked-list](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/2903-insert-greatest-common-divisors-in-linked-list) |
 ## Math
@@ -133,6 +134,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Stack
 |  |
 | ------- |
+| [0114-flatten-binary-tree-to-linked-list](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0114-flatten-binary-tree-to-linked-list) |
 | [0144-binary-tree-preorder-traversal](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0144-binary-tree-preorder-traversal) |
 | [0145-binary-tree-postorder-traversal](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0145-binary-tree-postorder-traversal) |
 | [1570-final-prices-with-a-special-discount-in-a-shop](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1570-final-prices-with-a-special-discount-in-a-shop) |
@@ -182,6 +184,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0098-validate-binary-search-tree](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0098-validate-binary-search-tree) |
 | [0112-path-sum](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0112-path-sum) |
+| [0114-flatten-binary-tree-to-linked-list](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0114-flatten-binary-tree-to-linked-list) |
 | [0144-binary-tree-preorder-traversal](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0144-binary-tree-preorder-traversal) |
 | [0145-binary-tree-postorder-traversal](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0145-binary-tree-postorder-traversal) |
 ## Depth-First Search
@@ -189,6 +192,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0098-validate-binary-search-tree](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0098-validate-binary-search-tree) |
 | [0112-path-sum](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0112-path-sum) |
+| [0114-flatten-binary-tree-to-linked-list](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0114-flatten-binary-tree-to-linked-list) |
 | [0144-binary-tree-preorder-traversal](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0144-binary-tree-preorder-traversal) |
 | [0145-binary-tree-postorder-traversal](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0145-binary-tree-postorder-traversal) |
 ## Breadth-First Search
@@ -200,6 +204,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0098-validate-binary-search-tree](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0098-validate-binary-search-tree) |
 | [0112-path-sum](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0112-path-sum) |
+| [0114-flatten-binary-tree-to-linked-list](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0114-flatten-binary-tree-to-linked-list) |
 | [0144-binary-tree-preorder-traversal](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0144-binary-tree-preorder-traversal) |
 | [0145-binary-tree-postorder-traversal](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0145-binary-tree-postorder-traversal) |
 ## Dynamic Programming
