@@ -6,6 +6,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0033-search-in-rotated-sorted-array](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0033-search-in-rotated-sorted-array) |
 | [0118-pascals-triangle](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0118-pascals-triangle) |
+| [0139-word-break](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0139-word-break) |
 | [0157-read-n-characters-given-read4](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0157-read-n-characters-given-read4) |
 | [1570-final-prices-with-a-special-discount-in-a-shop](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1570-final-prices-with-a-special-discount-in-a-shop) |
 | [1572-subrectangle-queries](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1572-subrectangle-queries) |
@@ -70,6 +71,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0008-string-to-integer-atoi](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0008-string-to-integer-atoi) |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0125-valid-palindrome](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0125-valid-palindrome) |
+| [0139-word-break](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0139-word-break) |
 | [1089-remove-vowels-from-a-string](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1089-remove-vowels-from-a-string) |
 | [1123-single-row-keyboard](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1123-single-row-keyboard) |
 | [1341-split-a-string-in-balanced-strings](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1341-split-a-string-in-balanced-strings) |
@@ -133,6 +135,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0138-copy-list-with-random-pointer](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0138-copy-list-with-random-pointer) |
+| [0139-word-break](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0139-word-break) |
 | [1123-single-row-keyboard](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1123-single-row-keyboard) |
 | [1904-second-largest-digit-in-a-string](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1904-second-largest-digit-in-a-string) |
 | [3787-maximum-students-on-a-single-bench](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/3787-maximum-students-on-a-single-bench) |
@@ -218,6 +221,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0118-pascals-triangle](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0118-pascals-triangle) |
+| [0139-word-break](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0139-word-break) |
 ## Brainteaser
 |  |
 | ------- |
@@ -230,4 +234,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0098-validate-binary-search-tree](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0098-validate-binary-search-tree) |
+## Trie
+|  |
+| ------- |
+| [0139-word-break](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0139-word-break) |
+## Memoization
+|  |
+| ------- |
+| [0139-word-break](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0139-word-break) |
 <!---LeetCode Topics End-->
