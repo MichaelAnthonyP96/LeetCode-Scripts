@@ -110,6 +110,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Design
 |  |
 | ------- |
+| [0173-binary-search-tree-iterator](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0173-binary-search-tree-iterator) |
 | [1572-subrectangle-queries](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1572-subrectangle-queries) |
 ## Matrix
 |  |
@@ -146,6 +147,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0114-flatten-binary-tree-to-linked-list](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0114-flatten-binary-tree-to-linked-list) |
 | [0144-binary-tree-preorder-traversal](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0144-binary-tree-preorder-traversal) |
 | [0145-binary-tree-postorder-traversal](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0145-binary-tree-postorder-traversal) |
+| [0173-binary-search-tree-iterator](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0173-binary-search-tree-iterator) |
 | [1570-final-prices-with-a-special-discount-in-a-shop](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1570-final-prices-with-a-special-discount-in-a-shop) |
 ## Monotonic Stack
 |  |
@@ -197,6 +199,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0114-flatten-binary-tree-to-linked-list](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0114-flatten-binary-tree-to-linked-list) |
 | [0144-binary-tree-preorder-traversal](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0144-binary-tree-preorder-traversal) |
 | [0145-binary-tree-postorder-traversal](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0145-binary-tree-postorder-traversal) |
+| [0173-binary-search-tree-iterator](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0173-binary-search-tree-iterator) |
 ## Depth-First Search
 |  |
 | ------- |
@@ -217,6 +220,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0114-flatten-binary-tree-to-linked-list](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0114-flatten-binary-tree-to-linked-list) |
 | [0144-binary-tree-preorder-traversal](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0144-binary-tree-preorder-traversal) |
 | [0145-binary-tree-postorder-traversal](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0145-binary-tree-postorder-traversal) |
+| [0173-binary-search-tree-iterator](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0173-binary-search-tree-iterator) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -234,6 +238,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0098-validate-binary-search-tree](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0098-validate-binary-search-tree) |
+| [0173-binary-search-tree-iterator](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0173-binary-search-tree-iterator) |
 ## Trie
 |  |
 | ------- |
@@ -242,4 +247,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0139-word-break](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0139-word-break) |
+## Iterator
+|  |
+| ------- |
+| [0173-binary-search-tree-iterator](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0173-binary-search-tree-iterator) |
 <!---LeetCode Topics End-->
