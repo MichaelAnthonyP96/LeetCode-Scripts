@@ -75,6 +75,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0139-word-break](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0139-word-break) |
 | [1089-remove-vowels-from-a-string](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1089-remove-vowels-from-a-string) |
 | [1123-single-row-keyboard](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1123-single-row-keyboard) |
+| [1250-longest-common-subsequence](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1250-longest-common-subsequence) |
 | [1341-split-a-string-in-balanced-strings](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1341-split-a-string-in-balanced-strings) |
 | [1797-goal-parser-interpretation](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1797-goal-parser-interpretation) |
 | [1895-minimum-number-of-operations-to-move-all-balls-to-each-box](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1895-minimum-number-of-operations-to-move-all-balls-to-each-box) |
@@ -229,6 +230,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0118-pascals-triangle](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0118-pascals-triangle) |
 | [0139-word-break](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0139-word-break) |
 | [0740-delete-and-earn](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/0740-delete-and-earn) |
+| [1250-longest-common-subsequence](https://github.com/MichaelAnthonyP96/LeetCode-Scripts/tree/master/1250-longest-common-subsequence) |
 ## Brainteaser
 |  |
 | ------- |
